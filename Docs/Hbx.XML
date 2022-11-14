@@ -1,0 +1,651 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hbx</name>
+    </assembly>
+    <members>
+        <member name="T:Hbx.Generic.GameObjectPool">
+            <summary>
+            Basic gameobject pool
+            </summary>
+        </member>
+        <member name="T:Hbx.Generic.GenericErrorResult">
+            <summary>
+            Class for returning generic errors
+            </summary>
+        </member>
+        <member name="M:Hbx.Ext.MatrixExt.GetTranslation(UnityEngine.Matrix4x4)">
+            <summary>
+            Extract translation from transform matrix.
+            </summary>
+            <param name="matrix">Transform matrix. This parameter is passed by reference
+            to improve performance; no changes will be made to it.</param>
+            <returns>
+            Translation offset.
+            </returns>
+        </member>
+        <member name="M:Hbx.Ext.MatrixExt.GetRotation(UnityEngine.Matrix4x4)">
+            <summary>
+            Extract rotation quaternion from transform matrix.
+            </summary>
+            <param name="matrix">Transform matrix. This parameter is passed by reference
+            to improve performance; no changes will be made to it.</param>
+            <returns>
+            Quaternion representation of rotation transform.
+            </returns>
+        </member>
+        <member name="M:Hbx.Ext.MatrixExt.GetScale(UnityEngine.Matrix4x4)">
+            <summary>
+            Extract scale from transform matrix.
+            </summary>
+            <param name="matrix">Transform matrix. This parameter is passed by reference
+            to improve performance; no changes will be made to it.</param>
+            <returns>
+            Scale vector.
+            </returns>
+        </member>
+        <member name="M:Hbx.Ext.MatrixExt.DecomposeMatrix(UnityEngine.Matrix4x4,UnityEngine.Vector3@,UnityEngine.Quaternion@,UnityEngine.Vector3@)">
+            <summary>
+            Extract position, rotation and scale from TRS matrix.
+            </summary>
+            <param name="matrix">Transform matrix. This parameter is passed by reference
+            to improve performance; no changes will be made to it.</param>
+            <param name="localPosition">Output position.</param>
+            <param name="localRotation">Output rotation.</param>
+            <param name="localScale">Output scale.</param>
+        </member>
+        <member name="F:Hbx.Ext.MatrixExt.IdentityQuaternion">
+            <summary>
+            Identity quaternion.
+            </summary>
+            <remarks>
+            <para>It is faster to access this variation than <c>Quaternion.identity</c>.</para>
+            </remarks>
+        </member>
+        <member name="F:Hbx.Ext.MatrixExt.IdentityMatrix">
+            <summary>
+            Identity matrix.
+            </summary>
+            <remarks>
+            <para>It is faster to access this variation than <c>Matrix4x4.identity</c>.</para>
+            </remarks>
+        </member>
+        <member name="T:Hbx.Ext.Vector3Ext">
+            <summary>
+            Vector3 ext.
+            </summary>
+        </member>
+        <member name="M:Hbx.Ext.TextureExt.FormatForFile(System.String)">
+            <summary>
+            Determine the Format from the files extension
+            </summary>
+            <returns>The Format for the passed file path, Unkown if not supported.</returns>
+            <param name="aFilePath">A file path.</param>
+        </member>
+        <member name="T:Hbx.Ext.TextureExt.TextureParams">
+            <summary>
+            Texture parameters for allocating textures with correct dimensions and format
+            </summary>
+        </member>
+        <member name="M:Hbx.Ext.TextureExt.ParamsFromTextureBytes(System.Byte[],Hbx.Ext.TextureExt.Format)">
+            <summary>
+            Determine the TextureParams from a files bytes depending on the file format
+            </summary>
+            <returns>The from texture bytes.</returns>
+            <param name="texBytes">Tex bytes.</param>
+            <param name="aFormat">A format.</param>
+        </member>
+        <member name="M:Hbx.Ext.TextureExt.LoadImageDDS(UnityEngine.Texture2D,System.Byte[])">
+            <summary>
+            When calling Load Image DDS the texture must have already been allocated with the correct dimensions and format
+            </summary>
+            <returns><c>true</c>, if image dds was loaded, <c>false</c> otherwise.</returns>
+            <param name="aTexture">A texture.</param>
+            <param name="ddsBytes">Dds file bytes.</param>
+        </member>
+        <member name="M:Hbx.Ext.TextureExt.EncodeTextureToFileBytes(UnityEngine.Texture2D,Hbx.Ext.TextureExt.Format)">
+            <summary>
+            Encodes the texture as a file of specified Format.
+            </summary>
+            <returns>The texture file bytes.</returns>
+            <param name="aTextue">A texture.</param>
+            <param name="aFormat">A format.</param>
+        </member>
+        <member name="M:Hbx.Ext.TextureExt.EncodeTextureToBase64String(UnityEngine.Texture2D,Hbx.Ext.TextureExt.Format)">
+            <summary>
+            Encodes the textures file byte representation to base64 string.
+            </summary>
+            <returns>The texture file bytes as base64 string.</returns>
+            <param name="aTexture">A texture.</param>
+            <param name="aFormat">A format.</param>
+        </member>
+        <member name="M:Hbx.Ext.GameObjectExt.SetToLayer(UnityEngine.GameObject[],System.Int32)">
+            <summary>
+            Convienience function. Set all passed gameobjects to specified layer
+            </summary>
+            <param name="aGameObjectArray">A game object array.</param>
+            <param name="aLayer">A layer.</param>
+        </member>
+        <member name="M:Hbx.Ext.GameObjectExt.SetToLayers(UnityEngine.GameObject,System.Collections.Generic.Dictionary{UnityEngine.GameObject,System.Int32})">
+            <summary>
+            Convienience function. Sets the gamobects in dictionary to use int value as their layer.
+            The dictionary could come from a call to GetLayersForComponentsInChildren
+            </summary>
+            <param name="aGameObject">A game object.</param>
+            <param name="layers">Layers.</param>
+        </member>
+        <member name="M:Hbx.Ext.GameObjectExt.SetComponentsInChildrenToLayer``1(UnityEngine.GameObject,System.Int32)">
+            <summary>
+            Sets all the gameobjects with a T type component to use a specific layer.
+            </summary>
+            <param name="aGameObject">A game object.</param>
+            <param name="aLayer">A layer.</param>
+        </member>
+        <member name="M:Hbx.Ext.GameObjectExt.SetComponentsToLayer(UnityEngine.GameObject,UnityEngine.Component[],System.Int32)">
+            <summary>
+            Convienience function. Sets the list of components to a specific layer.
+            </summary>
+            <param name="aGameObject">A game object.</param>
+            <param name="layers">Layers.</param>
+        </member>
+        <member name="M:Hbx.Ext.GameObjectExt.SetComponentsToLayers``1(UnityEngine.GameObject,System.Collections.Generic.Dictionary{``0,System.Int32})">
+            <summary>
+            Convienience function. Sets the components in dictionary to use int value as their layer.
+            The dictionary could come from a call to GetComponentsInChildrenLayers
+            </summary>
+            <param name="aGameObject">A game object.</param>
+            <param name="layers">Layers.</param>
+        </member>
+        <member name="M:Hbx.Ext.GameObjectExt.GetLayersForComponentsInChildren``1(UnityEngine.GameObject)">
+            <summary>
+            Return a dictionary of all components mapped to the layer their gameobject uses
+            </summary>
+            <returns>The renderer layers.</returns>
+            <param name="aGameObject">A game object.</param>
+        </member>
+        <member name="M:Hbx.Ext.TransformExt.SetTransformFromMatrix(UnityEngine.Transform,UnityEngine.Matrix4x4@)">
+            <summary>
+            Set transform component from TRS matrix.
+            </summary>
+            <param name="transform">Transform component.</param>
+            <param name="matrix">Transform matrix. This parameter is passed by reference
+            to improve performance; no changes will be made to it.</param>
+        </member>
+        <member name="M:Hbx.Ext.RectExt.AspectFitRectInRect(UnityEngine.Rect@,UnityEngine.Rect)">
+            <summary>
+            Returns a rect at aspect ratio of rfit that fits inside rtarget.
+            </summary>
+            <param name="rfit">Rfit.</param>
+            <param name="rtarget">Rtarget.</param>
+        </member>
+        <member name="M:Hbx.Ext.StringExt.AllIndexesOf(System.String,System.String,System.Boolean)">
+            <summary>
+            Return all the indexes of sub string in string.
+            </summary>
+            <returns>An array of indexes.</returns>
+            <param name="aString">A string.</param>
+            <param name="aSubString">A sub string.</param>
+            <param name="ignoreCase">If set to <c>true</c> ignore case.</param>
+        </member>
+        <member name="M:Hbx.Ext.StringExt.IndexOfContaining(System.String[],System.String,System.Int32)">
+            <summary>
+            Find the index of the first string encountered containing sub string, start search from start index
+            </summary>
+            <returns>The index of string containing substring, -1 if not found.</returns>
+            <param name="aStringList">A string list.</param>
+            <param name="aSubString">A sub string.</param>
+        </member>
+        <member name="T:Hbx.Assets.DiskTextLoader">
+            <summary>
+            DiskTextLoader handles reading text as string from local disk file system
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.DiskTextLoader.assetType">
+            <summary>
+            Handles raw asset type Text
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.DiskTextLoader.inputTypeMask">
+            <summary>
+            Can handle Path inputs
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.DiskTextLoader.extensions">
+            <summary>
+            Supports any extension as only deals with loading raw bytes
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.DiskTextLoader.read(System.String,ILoaderOptions)">
+            <summary>
+            Read file from disk returns text in <c>TextResult</c>
+            </summary>
+            <param name="src">The path to the file on the local disk file system</param>
+            <param name="options">Currently no supported options so can be null</param>
+            <returns><c>TextResult</c> containing files text as string if successful other wise invalid <c>TextResult</c></returns>
+        </member>
+        <member name="T:Hbx.Assets.JsonUtils">
+            <summary>
+            Tools for reading and writing object to json string format
+            </summary>
+        </member>
+        <member name="T:Hbx.Assets.JsonScriptableObject`1">
+            <summary>
+            Json scriptable object, a type of ScriptableObject that holds a single generic Data object that can be serialized to json.
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.JsonScriptableObject`1.ToJson(System.Boolean)">
+            <summary>
+            Convert the data object to a json string
+            </summary>
+            <returns>The json.</returns>
+            <param name="prettyPrint">If set to <c>true</c> pretty print.</param>
+        </member>
+        <member name="M:Hbx.Assets.JsonScriptableObject`1.ApplyJson(System.String)">
+            <summary>
+            Apply the json to the current Data instance
+            </summary>
+            <param name="aJsonString">A json string.</param>
+        </member>
+        <member name="M:Hbx.Assets.JsonScriptableObject`1.FromJson(System.String)">
+            <summary>
+            Load the json into a new Data instance
+            </summary>
+            <param name="aJsonString">A json string.</param>
+        </member>
+        <member name="M:Hbx.Assets.JsonScriptableObject`1.SyncFrom(System.String,System.Boolean,System.Action{System.Boolean})">
+            <summary>
+            Deserialise the Data object either from a passed json string or by loading a json string from a provided file path.
+            If it's not a json string (isJson=false) and aPathOrJson is empty a default file path is created in the persistant data folder.
+            </summary>
+            <param name="aPathOrJson">A path or json.</param>
+            <param name="isJson">If set to <c>true</c> is json.</param>
+            <param name="onCompletion">On completion.</param>
+        </member>
+        <member name="M:Hbx.Assets.JsonScriptableObject`1.SyncTo(System.Boolean,System.String,System.Action{System.Boolean,System.String})">
+            <summary>
+            Serialise the Data object, either by returning a json string or writing the json string to the provided file path.
+            If we want to save to the path (saveToPath=true) and aPathOrJson is empty a default file path is created in the persistant data folder.
+            </summary>
+            <param name="saveToPath">If set to <c>true</c> save to path.</param>
+            <param name="aPath">A path if saving.</param>
+            <param name="onCompletion">On completion.</param>
+        </member>
+        <member name="M:Hbx.Assets.JsonScriptableObject`1.OnBeforeSerialize">
+            <summary>
+            ISerializationCallbackReceiver function
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.JsonScriptableObject`1.OnAfterDeserialize">
+            <summary>
+            ISerializationCallbackReceiver function
+            </summary>
+            
+        </member>
+        <member name="T:Hbx.Assets.ILoader">
+            <summary>
+            Base non generic type for ILoader
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.ILoader.assetType">
+            <summary>
+            Returns the type of Asset this loader can handle
+            </summary>
+            <returns><c>AssetType</c> for the loader</returns>
+        </member>
+        <member name="P:Hbx.Assets.ILoader.inputTypeMask">
+            <summary>
+            Returns the type of Inputs this loader can accept.
+            Mask as may support multiple types.
+            </summary>
+            <returns><c>LoaderInputType</c> for the loader</returns>
+        </member>
+        <member name="P:Hbx.Assets.ILoader.extensions">
+            <returns>Array of file extensions this loader supports</returns>
+        </member>
+        <member name="P:Hbx.Assets.ILoader.protocols">
+            <summary>
+            Returns a array of protocols this loaders supports
+            file://, http:// etc but also things like $base64 and other inline string based formats
+            </summary>
+            <returns>Array of protocals this loader supports</returns>
+        </member>
+        <member name="M:Hbx.Assets.ILoader.supportsExtension(System.String)">
+            <summary>
+            Checks if this loader supports the provided extension
+            </summary>
+            <returns>True if the extension is supported</returns>
+            <param name="ext">File extension</param>
+        </member>
+        <member name="M:Hbx.Assets.ILoader.supportsProtocol(System.String)">
+            <summary>
+            Checks if this loader supports the provided protocol
+            </summary>
+            <returns>True if the inline prefix is supported</returns>
+            <param name="src">File path/src to be checked for protocol</param>
+        </member>
+        <member name="P:Hbx.Assets.ILoader.defaultOptions">
+            <summary>
+            Allocate a default options object for this loader
+            </summary>
+            <returns>Options object implementing the ILoaderOptions interface</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Hbx.Assets.ILoader.read(System.String,ILoaderOptions)" -->
+        <!-- Badly formed XML comment ignored for member "M:Hbx.Assets.ILoader.read(Hbx.Assets.BytesResult,ILoaderOptions)" -->
+        <member name="T:Hbx.Assets.ILoader`1">
+            <summary>
+            Generic interface for ILoader types enforces use of ILoaderResult for loading
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Hbx.Assets.ILoader`1.read(System.String,ILoaderOptions)" -->
+        <!-- Badly formed XML comment ignored for member "M:Hbx.Assets.ILoader`1.read(Hbx.Assets.BytesResult,ILoaderOptions)" -->
+        <member name="T:Hbx.Assets.ThreadOp">
+            <summary>
+            Base class for threaded operations
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.ThreadOp.Start">
+            <summary>
+            Start running the thread to perfrom our operation
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.ThreadOp.PerformOp">
+            <summary>
+            Abstract function implemented by contrete type, the content of the function is performed on the new thread
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.ThreadOp.Run">
+            <summary>
+            Funtion passed to Thread to be run, this calls our PerformOp and alters the isRunning value once complete
+            </summary>
+        </member>
+        <member name="T:Hbx.Assets.ReadDiskBytesThreadOp">
+            <summary>
+            Thread operation for performing file reads from the disk
+            </summary>
+        </member>
+        <member name="T:Hbx.Assets.WriteDiskBytesThreadOp">
+            <summary>
+            Thread operation for performing file writes from the disk
+            </summary>
+        </member>
+        <member name="T:Hbx.Assets.FileLoader`1">
+            <summary>
+            FileLoader base convienince type for loaders, provides useful default implementations
+            of the ILoader interface
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.FileLoader`1.assetType">
+            <summary>
+            Not implemented concrete type should implement
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.FileLoader`1.inputTypeMask">
+            <summary>
+            Not implemented concrete type should implement
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.FileLoader`1.extensions">
+            <summary>
+            Not implemented concrete type should implement
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Hbx.Assets.FileLoader`1.protocols" -->
+        <member name="P:Hbx.Assets.FileLoader`1.defaultOptions">
+            <summary>
+            No default options, conrete type should implement if needed
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.FileLoader`1.read(System.String,ILoaderOptions)">
+            <summary>
+            Not implemented concrete type should implement
+            </summary>
+            <param name="src"></param>
+            <param name="options"></param>
+            <returns>null</returns>
+        </member>
+        <member name="M:Hbx.Assets.FileLoader`1.read(Hbx.Assets.BytesResult,ILoaderOptions)">
+            <summary>
+            Not implemented concrete type should implement
+            </summary>
+            <param name="src"></param>
+            <param name="options"></param>
+            <returns>null</returns>
+        </member>
+        <member name="M:Hbx.Assets.FileLoader`1.Hbx#Assets#ILoader#read(System.String,ILoaderOptions)">
+            <summary>
+            We need to declare the object return types from the non generic ILoader
+            </summary>
+            <param name="src"></param>
+            <param name="options"></param>
+            <returns>null</returns>
+        </member>
+        <member name="M:Hbx.Assets.FileLoader`1.Hbx#Assets#ILoader#read(Hbx.Assets.BytesResult,ILoaderOptions)">
+            <summary>
+            We need to declare the object return types from the non generic ILoader
+            </summary>
+            <param name="src"></param>
+            <param name="options"></param>
+            <returns>null</returns>
+        </member>
+        <member name="M:Hbx.Assets.FileLoader`1.supportsExtension(System.String)">
+            <summary>
+            Default implementation checks if <c>extensions</c> contains ext
+            or wildcard *
+            </summary>
+            <param name="ext">extension to check</param>
+            <returns>true if extension is supported</returns>
+        </member>
+        <member name="M:Hbx.Assets.FileLoader`1.supportsProtocol(System.String)">
+            <summary>
+            Default implementation checks if src Starts with any value in <c>protocols</c>
+            </summary>
+            <param name="src"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hbx.Assets.Paths">
+            <summary>
+            Tools for working with paths in Hbx Unity apps
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.Paths.TrimUrlPageTag(System.String)">
+            <summary>
+            Removes any character after and including the # pagetag
+            </summary>
+            <returns>The url without any page tag.</returns>
+            <param name="aUrl">A URL.</param>
+        </member>
+        <member name="T:Hbx.Assets.TexIOManger">
+            <summary>
+            IO Manager for reading and writing texture data
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.TexIOManger.ReadWebTexture(System.String,System.Boolean,UnityEngine.Texture2D,System.Int32,System.Action{System.Boolean,UnityEngine.Texture2D,System.Int32})">
+            <summary>
+            Reads a texture file from a http:// or file:// path returning the bytes as a texture.
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aTexture">An exisitng texture, if null a new texture is created.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool and texture2D if succesful.</param>
+        </member>
+        <member name="M:Hbx.Assets.TexIOManger.ReadDiskTexture(System.String,System.Boolean,UnityEngine.Texture2D,System.Int32,System.Action{System.Boolean,UnityEngine.Texture2D,System.Int32})">
+            <summary>
+            Reads a texture file from a disk path returning the bytes as a texture
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aCompleteCallback">A complete callback.</param>
+        </member>
+        <member name="M:Hbx.Assets.TexIOManger.WriteDiskTexture(System.String,UnityEngine.Texture2D,System.Action{System.Boolean})">
+            <summary>
+            Write the Texture2D to disk in the format specified by aPaths file extension
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aTexture">A texture.</param>
+            <param name="aCompleteCallback">A complete callback.</param>
+        </member>
+        <member name="T:Hbx.Assets.LoaderInputType">
+            <summary>
+            Loaders can accept different types of input
+            Can be used as a mask as loaders may support multiple types
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Hbx.Assets.JsonLoader`1" -->
+        <member name="P:Hbx.Assets.JsonLoader`1.assetType">
+            <summary>
+            Handles raw asset type Text
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.JsonLoader`1.inputTypeMask">
+            <summary>
+            Can handle Path inputs
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.JsonLoader`1.extensions">
+            <summary>
+            Supports any extension as only deals with loading raw bytes
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.JsonLoader`1.read(System.String,ILoaderOptions)">
+            <summary>
+            Deserialize the src json string into GenericResult T type
+            </summary>
+            <param name="src">Should be a json string</param>
+            <param name="options">Currently no supported options so can be null</param>
+            <returns>GenericResult T</returns>
+        </member>
+        <member name="T:Hbx.Assets.GenericIOManager`1">
+            <summary>
+            Class for reading and writing data to various IO sources (disk, web etc)
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1.ReadWebData(System.String,System.Action{System.Boolean,System.Byte[]})">
+            <summary>
+            Reads a file from a http:// or file:// path returning the bytes
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool and byte array if succesful.</param>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1.ReadWebText(System.String,System.Action{System.Boolean,System.String})">
+            <summary>
+            Reads a file from a http:// or file:// path returning the bytes as UTF8 string
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool and UTF8 string if succesful.</param>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1._ReadWebData(System.String,System.Action{System.Boolean,System.Byte[]})">
+            <summary>
+            Coroutine function to perform the actual download of data using UnityWebRequest
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool and byte array if succesful.</param>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1.ReadDiskData(System.String,System.Action{System.Boolean,System.Byte[]})">
+            <summary>
+            Reads a file from a disk path returning the bytes
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool and byte array if succesful.</param>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1.ReadDiskText(System.String,System.Action{System.Boolean,System.String})">
+            <summary>
+            Reads a file from a disk path returning the bytes as UTF8 string
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool and UTF8 string if succesful.</param>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1._ReadDiskData(System.String,System.Action{System.Boolean,System.Byte[]})">
+            <summary>
+            Coroutine function to perform the actual data read on another thread if supported
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool and byte array if succesful.</param>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1.WriteDiskData(System.String,System.Byte[],System.Action{System.Boolean})">
+            <summary>
+            Writes bytes to a file on disk at the specified path
+            </summary>
+            <param name="aPath">A file path.</param>
+            <param name="aBytesResult">Bytes to write.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool.</param>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1.WriteDiskText(System.String,System.String,System.Action{System.Boolean})">
+            <summary>
+            Writes text to a file on disk at the specified path
+            </summary>
+            <param name="aPath">A file path.</param>
+            <param name="aString">String to write.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool.</param>
+        </member>
+        <member name="M:Hbx.Assets.GenericIOManager`1._WriteDiskData(System.String,System.Byte[],System.Action{System.Boolean})">
+            <summary>
+            Coroutine function to perform the actual data write on another thread if supported
+            </summary>
+            <param name="aPath">A path.</param>
+            <param name="aString">String to write.</param>
+            <param name="aCompleteCallback">A complete callback, returns success bool.</param>
+        </member>
+        <member name="T:Hbx.Assets.IOManager">
+            <summary>
+            Conrete type to be used for basic IO
+            </summary>
+        </member>
+        <member name="T:Hbx.Assets.DiskByteLoader">
+            <summary>
+            DiskByteLoader handles reading bytes as BytesResult from local disk file system
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.DiskByteLoader.assetType">
+            <summary>
+            Handles raw asset type btye array
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.DiskByteLoader.inputTypeMask">
+            <summary>
+            Can handle Path inputs
+            </summary>
+        </member>
+        <member name="P:Hbx.Assets.DiskByteLoader.extensions">
+            <summary>
+            Supports any extension as only deals with loading raw bytes
+            </summary>
+        </member>
+        <member name="M:Hbx.Assets.DiskByteLoader.read(System.String,ILoaderOptions)">
+            <summary>
+            Read file from disk returns bytes in <c>BytesResult</c>
+            </summary>
+            <param name="src">The path to the file on the local disk file system</param>
+            <param name="options">Currently no supported options so can be null</param>
+            <returns><c>BytesResult</c> containing files bytes if successful other wise invalid <c>BytesResult</c></returns>
+        </member>
+        <member name="T:Hbx.Assets.GenericResult`1">
+            <summary>
+            GenericResult allows for easy creation of new ILoaderResult types
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:ILoaderResult">
+            <summary>
+            Non generic base interface for ILoaderResult to allow usage in Lists etc
+            </summary>
+        </member>
+        <member name="P:ILoaderResult.valid">
+            <summary>
+            Is the result valid
+            </summary>
+        </member>
+        <member name="P:ILoaderResult.data">
+            <summary>
+            The data for the result
+            </summary>
+        </member>
+        <member name="T:ILoaderResult`1">
+            <summary>
+            Generic Interface for any type of result/type that a Loader can handle
+            </summary>
+        </member>
+        <member name="P:ILoaderResult`1.data">
+            <summary>
+            The data for the result
+            </summary>
+        </member>
+    </members>
+</doc>

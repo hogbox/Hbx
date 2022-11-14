@@ -1,0 +1,23 @@
+{
+    "name": "com.hogbox.core",
+    "version": "0.0.1",
+    "displayName": "Hogbox Core",
+    "description": "Core utility Library for Hogbox Tools",
+    "unity": "2019.1",
+    "unityRelease": "0b5",
+    "documentationUrl": "https://hogbox.com/",
+    "changelogUrl": "https://hogbox.com/changelog.html",
+    "licensesUrl": "https://hogbox.com/licensing.html",
+    "dependencies": {
+
+    },
+    "keywords": [
+        "Extensions",
+        "Serialization"
+    ],
+    "author": {
+        "name": "Hogbox Studios",
+        "email": "support@hogbox.com",
+        "url": "https://www.hogbox.com"
+    }
+}
