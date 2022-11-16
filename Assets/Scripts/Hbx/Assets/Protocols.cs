@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -60,7 +60,7 @@ public static class Protocols
         return DefaultProtocolForPlatform();
     }
 
-    public static bool ProtocolRequiresRead(Protocol protocol)
+    public static bool ProtocolRequiresFetch(Protocol protocol)
     {
         if(protocol == Protocol.FILE ||
             protocol == Protocol.HTTP ||

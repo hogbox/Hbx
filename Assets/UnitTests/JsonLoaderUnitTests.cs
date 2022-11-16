@@ -17,7 +17,7 @@ public class MyJsonClass
 public class JsonLoaderUnitTests
 {
     [Test]
-    public async Task CanReadSimpleJsonString()
+    public async Task CanReadJsonString()
     {
         // arrange
         string jsonstring =
@@ -25,13 +25,45 @@ public class JsonLoaderUnitTests
             ""type"": ""MyJsonClass"",
             ""simplelist"": [1, 2, 3, 4]
         }";
-        JsonLoader<MyJsonClass> jsonLoader = new JsonLoader<MyJsonClass>();
+        JsonLoader jsonLoader = new JsonLoader();
 
         // act
-        GenericResult<MyJsonClass> jsonobj = await jsonLoader.read(jsonstring, null);
+        ILoaderResult<MyJsonClass> jsonobj = await jsonLoader.ReadAsync<MyJsonClass>(jsonstring, null);
 
         // assert
         Assert.AreEqual(true, jsonobj.valid);
+    }
+
+    [Test]
+    public async Task CanReadJsonProtocolString()
+    {
+        // arrange
+        string jsonstring =
+        @"json://{
+            ""type"": ""MyJsonClass"",
+            ""simplelist"": [1, 2, 3, 4]
+        }";
+        JsonLoader jsonLoader = new JsonLoader();
+
+        // act
+        ILoaderResult<MyJsonClass> jsonobj = await jsonLoader.ReadAsync<MyJsonClass>(jsonstring, null);
+
+        // assert
+        Assert.AreEqual(true, jsonobj.valid);
+    }
+
+    [Test]
+    public async Task CanHandleInvalidJsonString()
+    {
+        // arrange
+        string jsonstring = "{,";
+        JsonLoader jsonLoader = new JsonLoader();
+
+        // act
+        ILoaderResult<MyJsonClass> jsonobj = await jsonLoader.ReadAsync<MyJsonClass>(jsonstring, null);
+
+        // assert
+        Assert.AreEqual(false, jsonobj.valid);
     }
 
     /*

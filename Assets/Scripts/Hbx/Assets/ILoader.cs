@@ -4,6 +4,7 @@
 // ILoader.cs
 //----------------------------------------------
 
+using System;
 using System.Threading.Tasks;
 
 namespace Hbx.Assets
@@ -15,33 +16,33 @@ namespace Hbx.Assets
     public interface ILoader
     {
         /// <summary>
-        /// Returns the type of Asset this loader can handle
+        /// Returns an array of types this loader can handle
         /// </summary>
         /// <returns><c>AssetType</c> for the loader</returns>
-        AssetType assetType { get; }
-
-        /// <summary>
-        /// Returns the type of Inputs this loader can accept.
-        /// Mask as may support multiple types.
-        /// </summary>
-        /// <returns><c>LoaderInputType</c> for the loader</returns>
-        LoaderInputType inputTypeMask { get; }
+        Type[] types { get; }
 
         /// <summary>
         /// Returns an array of extension strings supported by this loader
-        /// including the dot '.'. Additionally wildcard * indicates any
+        /// including the dot
         /// extension.
-        /// e,g. .png, .jpg, .obj, * etc
+        /// e,g. .png, .jpg, .obj etc
         /// </summary>
         /// <returns>Array of file extensions this loader supports</returns>
         string[] extensions { get; }
 
         /// <summary>
         /// Returns a array of protocols this loaders supports
-        /// file://, http:// etc but also things like $base64 and other inline string based formats
+        /// file://, http:// etc see Protocols.cs
         /// </summary>
         /// <returns>Array of protocals this loader supports</returns>
         string[] protocols { get; }
+
+        /// <summary>
+        /// Check is a Type is supported by this loader
+        /// </summary>
+        /// <param name="type">The type to check for support</param>
+        /// <returns>True if the type is supported by this loader</returns>
+        bool supportsType(Type type);
 
         /// <summary>
         /// Checks if this loader supports the provided extension
@@ -69,36 +70,14 @@ namespace Hbx.Assets
         /// <returns>Asset object of type T or null if loading fails/returns>
         /// <param name="src">File path, url, text or inline defintion for the asset/param>
         /// <param name="options">Options object to control loading behavior/param>
-        Task<object> read(string src, ILoaderOptions options);
+        Task<ILoaderResult<T>> ReadAsync<T>(string src, ILoaderOptions options);
 
         /// <summary>
-        /// Read an asset from the <c>BytesResult</c> specified
+        /// Read an asset from the byte array specified
         /// </summary>
         /// <returns>Asset object of type T or null if loading fails/returns>
         /// <param name="src">Byte array for the asset</param>
         /// <param name="options">Options object to control loading behavior/param>
-        Task<object> read(BytesResult src, ILoaderOptions options);
-    }
-
-    /// <summary>
-    /// Generic interface for ILoader types enforces use of ILoaderResult for loading
-    /// </summary>
-    public interface ILoader<T> : ILoader where T : ILoaderResult
-    {
-        /// <summary>
-        /// Read an asset from the src specified
-        /// </summary>
-        /// <returns>Asset object of type T or null if loading fails/returns>
-        /// <param name="src">File path, url, text or inline defintion for the asset/param>
-        /// <param name="options">Options object to control loading behavior/param>
-        new Task<T> read(string src, ILoaderOptions options);
-
-        /// <summary>
-        /// Read an asset from the <c>BytesResult</c> specified
-        /// </summary>
-        /// <returns>Asset object of type T or null if loading fails/returns>
-        /// <param name="src">Byte array for the asset</param>
-        /// <param name="options">Options object to control loading behavior/param>
-        new Task<T> read(BytesResult src, ILoaderOptions options);
+        Task<ILoaderResult<T>> ReadAsync<T>(byte[] src, ILoaderOptions options);
     }
 }

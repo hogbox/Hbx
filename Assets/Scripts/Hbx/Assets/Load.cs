@@ -1,6 +1,7 @@
+using System;
 using System.IO;
-using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 using Hbx.Generic;
@@ -12,8 +13,8 @@ public class Load : GenericSingleton<Load>
 
     public Load()
     {
-        AddLoader(new DiskByteLoader());
-        AddLoader(new DiskTextLoader());
+        AddLoader(new DiskLoader());
+        AddLoader(new JsonLoader());
     }
 
     public void AddLoader(ILoader loader)
@@ -29,56 +30,82 @@ public class Load : GenericSingleton<Load>
         }
     }
 
-    public ILoader GetLoaderForPath(string path)
+    public async Task<ILoaderResult<T>> ReadAsync<T>(string src, ILoaderOptions options = null)
     {
         // first find loaders to handle the protocol, this is because
-        // things like json, resource, addressable don't use extensions
+        // things like json://, resource://, address:// don't use extensions
         // meaning the protocol is the key piece of information
-        Protocol protocol = Protocols.ProtocolForPath(path);
-        List<ILoader> ploaders = GetLoadersForProtocol(protocol);
+        Protocol protocol = Protocols.ProtocolForPath(src);
+        ILoader ploader = GetLoaderForProtocol(protocol);
 
-        if(ploaders.Count == 0)
+        if (ploader == null)
         {
             // no loader for protocol
             return null;
         }
 
-        bool requiresread = Protocols.ProtocolRequiresRead(protocol);
-        if (requiresread)
+        // check if we first need to fetch the raw data, i.e. it's a file that needs
+        // fetching from disk or http server then loading with an addtional reader
+        if (!IsRawType(typeof(T)) && Protocols.ProtocolRequiresFetch(protocol))
         {
-            // find loaders for the extension
-            string ext = Path.GetExtension(path);
-            List<ILoader> extloaders = GetLoadersForExtension(ext);
+            // find loader for the extension, check the protocol loader first as http can handle textures etc
+            string ext = Path.GetExtension(src);
+            ILoader extloader = ploader.supportsExtension(ext) ? ploader : GetLoaderForExtension(ext);
 
-            if(extloaders.Count == 0)
+            if (extloader == null)
             {
-                // no loader for extension
-                return null;
+                // no loader for extension, if there is no extension see
+                // if we can find a loader for the type
+                if(string.IsNullOrEmpty(ext))
+                {
+                    extloader = ploader.supportsType(typeof(T)) ? ploader : GetLoaderForType(typeof(T));
+                }
+
+                if (extloader == null)
+                {
+                    return null;
+                }
             }
 
-            // what type of input it needs
-            LoaderInputType inputmask = extloaders[0].inputTypeMask;
-
-            //find the first protocol loader that can provide the input we need
-            foreach(ILoader ploader in ploaders)
+            // if our ploader is different from our extloader we will first
+            // read the data as bytes using the ploader then load the asset
+            // type T using the extloader
+            if (ploader != extloader)
             {
-                if(ploader.)
-            }
 
+                // read the data as bytes
+                ILoaderResult<byte[]> bytes = await ploader.ReadAsync<byte[]>(src, null);
+
+                if (!bytes.valid)
+                {
+                    // invalid data read from src
+                    return null;
+                }
+
+                // the raw data loaded successfully, now load the asset
+                // with the extension loader and raw bytes data
+                return await extloader.ReadAsync<T>(bytes, options); // TODO this could fail loading a Texture2D with no extension via the http loader i.e. it could be a dds file
+            }
         }
 
-        // now determine if one of the loaders can directly load the path
-        foreach(ILoader ploader in ploaders)
-        {
-            if(ploader.inputTypeMask.HasFlag(LoaderInputType.Path))
-            {
-
-            }
-        }
-        return null;
+        // load directly with the protocol loader and src
+        return await ploader.ReadAsync<T>(src, options); // TODO should we validate the supported type before trying to load?
     }
 
-    public List<ILoader> GetLoadersForExtension(string ext)
+    public ILoader GetLoaderForType(Type type)
+    {
+        List<ILoader> loaders = new List<ILoader>();
+        foreach (ILoader loader in _loaders)
+        {
+            if (loader.supportsType(type))
+            {
+                loaders.Add(loader);
+            }
+        }
+        return loaders.Count > 0 ? loaders[0] : null;
+    }
+
+    public ILoader GetLoaderForExtension(string ext)
     {
         List<ILoader> loaders = new List<ILoader>();
         foreach (ILoader loader in _loaders)
@@ -88,10 +115,10 @@ public class Load : GenericSingleton<Load>
                 loaders.Add(loader);
             }
         }
-        return loaders;
+        return loaders.Count > 0 ? loaders[0] : null;
     }
 
-    public List<ILoader> GetLoadersForProtocol(Protocol protocol)
+    public ILoader GetLoaderForProtocol(Protocol protocol)
     {
         string protocolprefix = Protocols.PrefixForProtocol(protocol);
         List<ILoader> loaders = new List<ILoader>();
@@ -102,6 +129,11 @@ public class Load : GenericSingleton<Load>
                 loaders.Add(loader);
             }
         }
-        return loaders;
+        return loaders.Count > 0 ? loaders[0] : null;
+    }
+
+    public static bool IsRawType(Type type)
+    {
+        return type == typeof(byte[]) || type == typeof(string);
     }
 }

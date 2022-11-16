@@ -23,10 +23,25 @@ public interface ILoaderResult
 /// <summary>
 /// Generic Interface for any type of result/type that a Loader can handle
 /// </summary>
-public interface ILoaderResult<T> : ILoaderResult
+public class ILoaderResult<T> : ILoaderResult
 {
-    /// <summary>
-    /// The data for the result
-    /// </summary>
-    new T data { get; }
+    T _data = default;
+
+    public ILoaderResult()
+    {
+        _data = default;
+    }
+
+    public ILoaderResult(T data)
+    {
+        _data = data;
+    }
+
+    public static implicit operator T(ILoaderResult<T> d) => d.data;
+
+    public bool valid => _data != null;
+
+    public T data => _data;
+
+    object ILoaderResult.data => throw new System.NotImplementedException();
 }
