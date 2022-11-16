@@ -41,7 +41,7 @@ public class Load : GenericSingleton<Load>
         if (ploader == null)
         {
             // no loader for protocol
-            return null;
+            return new ILoaderResult<T>(); ;
         }
 
         // check if we first need to fetch the raw data, i.e. it's a file that needs
@@ -63,7 +63,7 @@ public class Load : GenericSingleton<Load>
 
                 if (extloader == null)
                 {
-                    return null;
+                    return new ILoaderResult<T>(); ;
                 }
             }
 
@@ -79,7 +79,7 @@ public class Load : GenericSingleton<Load>
                 if (!bytes.valid)
                 {
                     // invalid data read from src
-                    return null;
+                    return new ILoaderResult<T>();
                 }
 
                 // the raw data loaded successfully, now load the asset

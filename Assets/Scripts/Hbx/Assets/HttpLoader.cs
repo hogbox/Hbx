@@ -76,23 +76,23 @@ namespace Hbx.Assets
             if (wr.result != UnityWebRequest.Result.Success)
             {
                 //Debug.Log(wr.error);
+                return new ILoaderResult<T>();
             }
             else
             {
-                // Show results as text
-                //Debug.Log(wr.downloadHandler.text);
-
-                // Or retrieve results as binary data
+                // do we just want raw bytes
                 if (typeof(T) == typeof(byte[]))
                 {
                     byte[] bytes = wr.downloadHandler.data;
                     result = (T)(object)bytes;
                 }
+                // do we just want raw text
                 else if(typeof(T) == typeof(string))
                 {
                     string str = wr.downloadHandler.text;
                     result = (T)(object)str;
                 }
+                // do we want a texture2d
                 else if(typeof(T) == typeof(Texture2D))
                 {
                     DownloadHandlerTexture texd = (DownloadHandlerTexture)wr.downloadHandler;

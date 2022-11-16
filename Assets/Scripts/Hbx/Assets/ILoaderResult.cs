@@ -26,20 +26,23 @@ public interface ILoaderResult
 public class ILoaderResult<T> : ILoaderResult
 {
     T _data = default;
+    bool _set = false;
 
     public ILoaderResult()
     {
         _data = default;
+        _set = false;
     }
 
     public ILoaderResult(T data)
     {
         _data = data;
+        _set = true;
     }
 
     public static implicit operator T(ILoaderResult<T> d) => d.data;
 
-    public bool valid => _data != null;
+    public bool valid => _data != null && _set;
 
     public T data => _data;
 

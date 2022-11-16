@@ -54,21 +54,21 @@ namespace Hbx.Assets
                 src = src.Remove(0, Protocols.JSON_PREFIX.Length);
             }
 
-            // pass the json using JsonUtility. TODO do we need to check for exceptions?
-            //T result = JsonUtility.FromJson<T>(src);
             T result = default;
+            Exception exception = null;
             await Task.Run(() =>
             {
                 try
                 {
                     result = JsonUtility.FromJson<T>(src);
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
                     // TODO will relying on exception work in builds?
                     // a user could provide an invalid json string and
                     // we want to be able to provide and error, not crash
                     result = default;
+                    exception = e;
                 }
             });
             return new ILoaderResult<T>(result);

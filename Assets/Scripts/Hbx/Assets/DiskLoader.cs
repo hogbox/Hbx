@@ -47,20 +47,19 @@ namespace Hbx.Assets
         public override async Task<ILoaderResult<T>> ReadAsync<T>(string src, ILoaderOptions options)
         {
             if (!File.Exists(src)) return new ILoaderResult<T>();
-            T result = default;
 
             if (typeof(T) == typeof(byte[]))
             {
                 byte[] bytes = await File.ReadAllBytesAsync(src);
-                result = (T)(object)bytes;
+                return new ILoaderResult<T>((T)(object)bytes);
             }
             else if(typeof(T) == typeof(string))
             {
                 string str = await File.ReadAllTextAsync(src);
-                result = (T)(object)str;
+                return new ILoaderResult<T>((T)(object)str);
             }
 
-            return new ILoaderResult<T>(result);
+            return new ILoaderResult<T>();
         }
     }
 }
