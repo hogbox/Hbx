@@ -15,15 +15,15 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 377
-    width: 1792
-    height: 1003
+    y: 53
+    width: 2560
+    height: 1327
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,12 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1792
-    height: 953
+    width: 2560
+    height: 1277
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 72
+  controlID: 312
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,19 +64,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1129.5
+    x: 1613
     y: 0
-    width: 662.5
-    height: 953
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 947
+    height: 1277
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 16}
   - {fileID: 13}
   - {fileID: 12}
   m_Selected: 1
-  m_LastSelected: 2
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,10 +94,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 277
-    height: 576.5
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 395.5
+    height: 772
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -113,23 +113,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 576.5
-    width: 1129.5
-    height: 376.5
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+    y: 772
+    width: 1613
+    height: 505
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,8 +150,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1792
-    height: 1003
+    width: 2560
+    height: 1327
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -175,7 +175,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1792
+    width: 2560
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -196,8 +196,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 983
-    width: 1792
+    y: 1307
+    width: 2560
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -220,12 +220,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1129.5
-    height: 953
+    width: 1613
+    height: 1277
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 313
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,12 +245,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1129.5
-    height: 576.5
+    width: 1613
+    height: 772
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 82
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,10 +266,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 277
+    x: 395.5
     y: 0
-    width: 852.5
-    height: 576.5
+    width: 1217.5
+    height: 772
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
@@ -354,21 +354,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1129.5
-    y: 407
-    width: 661.5
-    height: 932
+    x: 1613
+    y: 83
+    width: 946
+    height: 1256
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 123
+    ID: 116
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 646.5
-    - 215.5
+    - 889.5
+    - 296.5
     relativeSizes:
     - 0.75
     - 0.25
@@ -378,7 +378,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 862
+    lastTotalSize: 1186
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -395,7 +395,7 @@ MonoBehaviour:
       name: HbxLoader
       fullName: HbxLoader
       resultStatus: 1
-      duration: 0.392207
+      duration: 94.60804
       messages: 
       output: 
       stacktrace: 
@@ -406,12 +406,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1007
-      uniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/HbxLoader/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1033
+      uniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
       name: HbxUnitTests.dll
-      fullName: /Users/thomashogarth/Documents/hogbox/unityplugins/HbxLoader/Library/ScriptAssemblies/HbxUnitTests.dll
+      fullName: /Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll
       resultStatus: 1
-      duration: 0.1495026
+      duration: 94.31632
       messages: 
       output: 
       stacktrace: 
@@ -423,11 +423,11 @@ MonoBehaviour:
       parentId: 1000
       parentUniqueId: '[HbxLoader][suite]'
     - id: 1001
-      uniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskByteLoaderUnitTests][suite]
-      name: DiskByteLoaderUnitTests
-      fullName: DiskByteLoaderUnitTests
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+      name: DiskLoaderUnitTests
+      fullName: DiskLoaderUnitTests
       resultStatus: 1
-      duration: 0.0741931
+      duration: 0.118995
       messages: 
       output: 
       stacktrace: 
@@ -436,81 +436,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1007
-      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/HbxLoader/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1002
-      uniqueId: HbxUnitTests.dll/DiskByteLoaderUnitTests/[HbxUnitTests][DiskByteLoaderUnitTests.CanLoadSimpleDiskFile]
-      name: CanLoadSimpleDiskFile
-      fullName: DiskByteLoaderUnitTests.CanLoadSimpleDiskFile
-      resultStatus: 1
-      duration: 0.0392727
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskByteLoaderUnitTests][suite]
-    - id: 1003
-      uniqueId: HbxUnitTests.dll/DiskByteLoaderUnitTests/[HbxUnitTests][DiskByteLoaderUnitTests.ReturnsInvalidBytesForMissingFile]
-      name: ReturnsInvalidBytesForMissingFile
-      fullName: DiskByteLoaderUnitTests.ReturnsInvalidBytesForMissingFile
-      resultStatus: 1
-      duration: 0.018123
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskByteLoaderUnitTests][suite]
-    - id: 1004
-      uniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskTextLoaderUnitTests][suite]
-      name: DiskTextLoaderUnitTests
-      fullName: DiskTextLoaderUnitTests
-      resultStatus: 1
-      duration: 0.04092
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1007
-      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/HbxLoader/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1005
-      uniqueId: HbxUnitTests.dll/DiskTextLoaderUnitTests/[HbxUnitTests][DiskTextLoaderUnitTests.CanLoadSimpleDiskFile]
-      name: CanLoadSimpleDiskFile
-      fullName: DiskTextLoaderUnitTests.CanLoadSimpleDiskFile
-      resultStatus: 1
-      duration: 0.0309436
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskTextLoaderUnitTests][suite]
+      parentId: 1033
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
     - id: 1006
-      uniqueId: HbxUnitTests.dll/DiskTextLoaderUnitTests/[HbxUnitTests][DiskTextLoaderUnitTests.ReturnsInvalidTextForMissingFile]
-      name: ReturnsInvalidTextForMissingFile
-      fullName: DiskTextLoaderUnitTests.ReturnsInvalidTextForMissingFile
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanHandleInvalidReadType]
+      name: CanHandleInvalidReadType
+      fullName: DiskLoaderUnitTests.CanHandleInvalidReadType
       resultStatus: 1
-      duration: 0.0068172
+      duration: 0.0244788
       messages: 
       output: 
       stacktrace: 
@@ -520,14 +453,149 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1004
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskTextLoaderUnitTests][suite]
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1002
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanReadDiskFileAsBytes]
+      name: CanReadDiskFileAsBytes
+      fullName: DiskLoaderUnitTests.CanReadDiskFileAsBytes
+      resultStatus: 1
+      duration: 0.0333276
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1003
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanReadDiskFileAsText]
+      name: CanReadDiskFileAsText
+      fullName: DiskLoaderUnitTests.CanReadDiskFileAsText
+      resultStatus: 1
+      duration: 0.0252404
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1004
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.ReturnsNullForMissingBytesFile]
+      name: ReturnsNullForMissingBytesFile
+      fullName: DiskLoaderUnitTests.ReturnsNullForMissingBytesFile
+      resultStatus: 1
+      duration: 0.01062
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1005
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.ReturnsNullForMissingTextFile]
+      name: ReturnsNullForMissingTextFile
+      fullName: DiskLoaderUnitTests.ReturnsNullForMissingTextFile
+      resultStatus: 1
+      duration: 0.0073138
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1007
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
+      name: HttpLoaderUnitTests
+      fullName: HttpLoaderUnitTests
+      resultStatus: 1
+      duration: 0.534697
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1008
+      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsBytes]
+      name: CanReadHttpFileAsBytes
+      fullName: HttpLoaderUnitTests.CanReadHttpFileAsBytes
+      resultStatus: 1
+      duration: 0.3326856
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
+    - id: 1009
+      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsText]
+      name: CanReadHttpFileAsText
+      fullName: HttpLoaderUnitTests.CanReadHttpFileAsText
+      resultStatus: 1
+      duration: 0.0258305
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
+    - id: 1010
+      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsTexture2D]
+      name: CanReadHttpFileAsTexture2D
+      fullName: HttpLoaderUnitTests.CanReadHttpFileAsTexture2D
+      resultStatus: 1
+      duration: 0.1705582
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
     - id: 1007
       uniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
       name: JsonLoaderUnitTests
       fullName: JsonLoaderUnitTests
       resultStatus: 1
-      duration: 0.0102174
+      duration: 0.0940213
       messages: 
       output: 
       stacktrace: 
@@ -538,12 +606,12 @@ MonoBehaviour:
       categories: []
       parentId: 1009
       parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/HbxLoader/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1023
-      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanReadSimpleJsonString]
-      name: CanReadSimpleJsonString
-      fullName: JsonLoaderUnitTests.CanReadSimpleJsonString
+    - id: 1014
+      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanHandleInvalidJsonString]
+      name: CanHandleInvalidJsonString
+      fullName: JsonLoaderUnitTests.CanHandleInvalidJsonString
       resultStatus: 1
-      duration: 0.005356
+      duration: 0.0380701
       messages: 
       output: 
       stacktrace: 
@@ -553,14 +621,200 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1022
+      parentId: 1011
       parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
+    - id: 1013
+      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanReadJsonProtocolString]
+      name: CanReadJsonProtocolString
+      fullName: JsonLoaderUnitTests.CanReadJsonProtocolString
+      resultStatus: 1
+      duration: 0.0222301
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
+    - id: 1012
+      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanReadJsonString]
+      name: CanReadJsonString
+      fullName: JsonLoaderUnitTests.CanReadJsonString
+      resultStatus: 1
+      duration: 0.0180712
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
+    - id: 1015
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+      name: LoadUnitTests
+      fullName: LoadUnitTests
+      resultStatus: 1
+      duration: 1.3163255
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1016
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadBytesFromFile]
+      name: CanReadBytesFromFile
+      fullName: LoadUnitTests.CanReadBytesFromFile
+      resultStatus: 1
+      duration: 0.0412962
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1020
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpFileAsBytes]
+      name: CanReadHttpFileAsBytes
+      fullName: LoadUnitTests.CanReadHttpFileAsBytes
+      resultStatus: 1
+      duration: 0.7232469
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1021
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpFileAsText]
+      name: CanReadHttpFileAsText
+      fullName: LoadUnitTests.CanReadHttpFileAsText
+      resultStatus: 1
+      duration: 0.0276781
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1022
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpJsonFile]
+      name: CanReadHttpJsonFile
+      fullName: LoadUnitTests.CanReadHttpJsonFile
+      resultStatus: 1
+      duration: 0.3058075
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1023
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpTexture2D]
+      name: CanReadHttpTexture2D
+      fullName: LoadUnitTests.CanReadHttpTexture2D
+      resultStatus: 1
+      duration: 0.160821
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1018
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadJsonFile]
+      name: CanReadJsonFile
+      fullName: LoadUnitTests.CanReadJsonFile
+      resultStatus: 1
+      duration: 0.0128361
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1019
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadJsonProtocol]
+      name: CanReadJsonProtocol
+      fullName: LoadUnitTests.CanReadJsonProtocol
+      resultStatus: 1
+      duration: 0.0098537
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1017
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadTextFromFile]
+      name: CanReadTextFromFile
+      fullName: LoadUnitTests.CanReadTextFromFile
+      resultStatus: 1
+      duration: 0.0161398
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
     - id: 1009
       uniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
       name: ProtocolsUnitTests
       fullName: ProtocolsUnitTests
       resultStatus: 1
-      duration: 0.0115826
+      duration: 0.0099248
       messages: 
       output: 
       stacktrace: 
@@ -576,7 +830,7 @@ MonoBehaviour:
       name: ReturnsAddressablePrefixForProtocol
       fullName: ProtocolsUnitTests.ReturnsAddressablePrefixForProtocol
       resultStatus: 1
-      duration: 0.0015906
+      duration: 0.0015283
       messages: 
       output: 
       stacktrace: 
@@ -593,7 +847,7 @@ MonoBehaviour:
       name: ReturnsAddressableProtocolForAddressPath
       fullName: ProtocolsUnitTests.ReturnsAddressableProtocolForAddressPath
       resultStatus: 1
-      duration: 0.0004281
+      duration: 0.0002083
       messages: 
       output: 
       stacktrace: 
@@ -610,7 +864,7 @@ MonoBehaviour:
       name: ReturnsFilePrefixForProtocol
       fullName: ProtocolsUnitTests.ReturnsFilePrefixForProtocol
       resultStatus: 1
-      duration: 0.0001753
+      duration: 0.000159
       messages: 
       output: 
       stacktrace: 
@@ -627,7 +881,7 @@ MonoBehaviour:
       name: ReturnsFileProtocolForFilePath
       fullName: ProtocolsUnitTests.ReturnsFileProtocolForFilePath
       resultStatus: 1
-      duration: 0.0001955
+      duration: 0.0001654
       messages: 
       output: 
       stacktrace: 
@@ -644,7 +898,7 @@ MonoBehaviour:
       name: ReturnsHttpPrefixForProtocol
       fullName: ProtocolsUnitTests.ReturnsHttpPrefixForProtocol
       resultStatus: 1
-      duration: 0.0001668
+      duration: 0.0001495
       messages: 
       output: 
       stacktrace: 
@@ -661,7 +915,7 @@ MonoBehaviour:
       name: ReturnsHttpProtocolForHttpPath
       fullName: ProtocolsUnitTests.ReturnsHttpProtocolForHttpPath
       resultStatus: 1
-      duration: 0.0001988
+      duration: 0.000164
       messages: 
       output: 
       stacktrace: 
@@ -678,7 +932,7 @@ MonoBehaviour:
       name: ReturnsHttpsPrefixForProtocol
       fullName: ProtocolsUnitTests.ReturnsHttpsPrefixForProtocol
       resultStatus: 1
-      duration: 0.0001732
+      duration: 0.0001465
       messages: 
       output: 
       stacktrace: 
@@ -695,7 +949,7 @@ MonoBehaviour:
       name: ReturnsHttpsProtocolForHttpsPath
       fullName: ProtocolsUnitTests.ReturnsHttpsProtocolForHttpsPath
       resultStatus: 1
-      duration: 0.0001982
+      duration: 0.0001631
       messages: 
       output: 
       stacktrace: 
@@ -712,7 +966,7 @@ MonoBehaviour:
       name: ReturnsJsonPrefixForProtocol
       fullName: ProtocolsUnitTests.ReturnsJsonPrefixForProtocol
       resultStatus: 1
-      duration: 0.0001755
+      duration: 0.0001474
       messages: 
       output: 
       stacktrace: 
@@ -729,7 +983,7 @@ MonoBehaviour:
       name: ReturnsJsonProtocolForJsonPath
       fullName: ProtocolsUnitTests.ReturnsJsonProtocolForJsonPath
       resultStatus: 1
-      duration: 0.0002373
+      duration: 0.0001862
       messages: 
       output: 
       stacktrace: 
@@ -746,7 +1000,7 @@ MonoBehaviour:
       name: ReturnsResourcesPrefixForProtocol
       fullName: ProtocolsUnitTests.ReturnsResourcesPrefixForProtocol
       resultStatus: 1
-      duration: 0.0001691
+      duration: 0.0001571
       messages: 
       output: 
       stacktrace: 
@@ -763,7 +1017,7 @@ MonoBehaviour:
       name: ReturnsResourcesProtocolForResourcePath
       fullName: ProtocolsUnitTests.ReturnsResourcesProtocolForResourcePath
       resultStatus: 1
-      duration: 0.0002125
+      duration: 0.0001693
       messages: 
       output: 
       stacktrace: 
@@ -775,13 +1029,63 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1009
       parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    m_ResultText: ReturnsAddressableProtocolForHttpsPath (0.014s)
+    - id: 1037
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
+      name: ResourcesLoaderUnitTests
+      fullName: ResourcesLoaderUnitTests
+      resultStatus: 1
+      duration: 94.3101
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1041
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1039
+      uniqueId: HbxUnitTests.dll/ResourcesLoaderUnitTests/[HbxUnitTests][ResourcesLoaderUnitTests.CanLoadResourcesTextAsset]
+      name: CanLoadResourcesTextAsset
+      fullName: ResourcesLoaderUnitTests.CanLoadResourcesTextAsset
+      resultStatus: 1
+      duration: 94.28455
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
+    - id: 1038
+      uniqueId: HbxUnitTests.dll/ResourcesLoaderUnitTests/[HbxUnitTests][ResourcesLoaderUnitTests.CanLoadResourcesTexture2D]
+      name: CanLoadResourcesTexture2D
+      fullName: ResourcesLoaderUnitTests.CanLoadResourcesTexture2D
+      resultStatus: 1
+      duration: 0.0213887
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
+    m_ResultText: CanLoadResourcesTextAsset (94.285s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3230783d
-      m_LastClickedID: 1031286834
-      m_ExpandedIDs: 27ac839c57efb29fc0c43aa2ad96c4a5b29fd7d5a29207f3d7c9850bfbe7c30c8f504f4dffe7e57bffffff7f
+      m_SelectedIDs: 4236b5df
+      m_LastClickedID: -541772222
+      m_ExpandedIDs: 27ac839c57efb29fc0c43aa2ad96c4a5b29fd7d5b06ff0e9a29207f3d7c9850bfbe7c30ce0dcbb178f504f4d02a68b50340a4973ffe7e57bffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -908,9 +1212,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 665.5
-    width: 1128.5
-    height: 355.5
+    y: 855
+    width: 1612
+    height: 484
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -928,22 +1232,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UnitTests
+    - Assets/Resources/unittest
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/UnitTests
+  - Assets/Resources/unittest
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: /Users/thomashogarth/Documents/hogbox/unityplugins/HbxLoader
+  m_LastProjectPath: /Users/thomashogarth/Documents/hogbox/unityplugins/Hbx
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c5a0000
-    m_LastClickedID: 23196
-    m_ExpandedIDs: 00000000905a0000985a0000e45b000000ca9a3b
+    m_SelectedIDs: 685d0000
+    m_LastClickedID: 23912
+    m_ExpandedIDs: 00000000985a0000285b0000365b00005c5d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -971,7 +1275,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000905a0000
+    m_ExpandedIDs: 00000000985a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1002,20 +1306,20 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ProtocolsUnitTests
-      m_OriginalName: ProtocolsUnitTests
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 23768
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1047,10 +1351,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1428.5
-    y: 89
-    width: 362.5
-    height: 932
+    x: 1613
+    y: 83
+    width: 946
+    height: 1256
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1089,9 +1393,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 407
-    width: 276
-    height: 555.5
+    y: 83
+    width: 394.5
+    height: 751
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1101,7 +1405,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d4daffff1edbfffff4dcffff16deffff60deffffa0dfffffdcdfffff26e0ffffbee1ffffb4e2fffffee2ffff3ee4ffff88e5ffffd2e5ffff3ae7ffff2cecffff76ecffffb6edffff92eeffffdceeffff1cf0ffff8af0ffffd4f0ffff2af2ffff68f6ffffb2f6fffff2f7ffff7cf8ffffc6f8ffff0cfaffff2afbffff
+      m_ExpandedIDs: facdffff44ceffff84cfffff9cd1ffffe6d1ffff2ed3ffffe8d3ffff32d4ffff72d5ffffb2d5fffffcd5ffff44d7ffff04d8ffff4ed8ffff96d9fffff2deffff3cdfffffb6e0fffff2e0ffff3ce1ffff8ce2ffff5ae3ffffa4e3ffff16e5ffffdee5ffff28e6ffff50e8ffff8ce8ffffd6e8ffff16eaffff74eaffffbeeaffffe6ecffffaeedfffff8edffff0af0ffffe2f0ffff2cf1ffff3ef3ffffdcf4ffff26f5ffff38f7ffff04f8ffff4ef8ffff94f9ffff32fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1145,10 +1449,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 277
-    y: 407
-    width: 850.5
-    height: 555.5
+    x: 395.5
+    y: 83
+    width: 1215.5
+    height: 751
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1450,10 +1754,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 277
-    y: 89
-    width: 850.5
-    height: 555.5
+    x: 395.5
+    y: 83
+    width: 1215.5
+    height: 751
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1464,7 +1768,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1701, y: 1069}
+  m_TargetSize: {x: 2431, y: 1460}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1479,10 +1783,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -425.25
-    m_HBaseRangeMax: 425.25
-    m_VBaseRangeMin: -267.25
-    m_VBaseRangeMax: 267.25
+    m_HBaseRangeMin: -607.75
+    m_HBaseRangeMax: 607.75
+    m_VBaseRangeMin: -365
+    m_VBaseRangeMax: 365
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1500,23 +1804,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 850.5
-      height: 534.5
+      width: 1215.5
+      height: 730
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 425.25, y: 267.25}
+    m_Translation: {x: 607.75, y: 365}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -425.25
-      y: -267.25
-      width: 850.5
-      height: 534.5
+      x: -607.75
+      y: -365
+      width: 1215.5
+      height: 730
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1701, y: 1111}
+  m_LastWindowPixelSize: {x: 2431, y: 1502}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -1543,9 +1847,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 983.5
-    width: 1128.5
-    height: 355.5
+    y: 855
+    width: 1612
+    height: 484
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

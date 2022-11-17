@@ -8,23 +8,13 @@ using UnityEngine.TestTools;
 
 using Hbx.Assets;
 
-public class MyJsonClass
-{
-    public string type;
-    public int[] simplelist;
-}
-
 public class JsonLoaderUnitTests
 {
     [Test]
     public async Task CanReadJsonString()
     {
         // arrange
-        string jsonstring =
-        @"{
-            ""type"": ""MyJsonClass"",
-            ""simplelist"": [1, 2, 3, 4]
-        }";
+        string jsonstring = UnitTestData.MyJsonClassString;
         JsonLoader jsonLoader = new JsonLoader();
 
         // act
@@ -32,17 +22,15 @@ public class JsonLoaderUnitTests
 
         // assert
         Assert.AreEqual(true, jsonobj.valid);
+        Assert.AreEqual(true, jsonobj.data.Equals(UnitTestData.MyJsonClassInstance));
     }
 
     [Test]
     public async Task CanReadJsonProtocolString()
     {
         // arrange
-        string jsonstring =
-        @"json://{
-            ""type"": ""MyJsonClass"",
-            ""simplelist"": [1, 2, 3, 4]
-        }";
+        string jsonstring = UnitTestData.MyJsonClassProtocolString;
+        
         JsonLoader jsonLoader = new JsonLoader();
 
         // act
@@ -50,6 +38,7 @@ public class JsonLoaderUnitTests
 
         // assert
         Assert.AreEqual(true, jsonobj.valid);
+        Assert.AreEqual(true, jsonobj.data.Equals(UnitTestData.MyJsonClassInstance));
     }
 
     [Test]
@@ -65,32 +54,4 @@ public class JsonLoaderUnitTests
         // assert
         Assert.AreEqual(false, jsonobj.valid);
     }
-
-    /*
-    [Test]
-    public async Task ReturnsInvalidBytesForMissingFile()
-    {
-        // arrange
-        string filepath = Path.Combine(Application.streamingAssetsPath, "nonexistantfile.json");
-        DiskByteLoader diskLoader = new DiskByteLoader();
-
-        // act
-        BytesResult bytes = await diskLoader.read(filepath, null);
-
-        // assert
-        Assert.AreEqual(false, bytes.valid);
-    }
-    */
-
-    /*
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator DiskLoaderUnitTestsWithEnumeratorPasses()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
-    }
-    */
 }

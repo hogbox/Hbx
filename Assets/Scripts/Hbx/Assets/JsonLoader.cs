@@ -50,7 +50,7 @@ namespace Hbx.Assets
             // check if this is an inline asset using the json:// protocol
             if (Protocols.IsPathUsingProtocol(src, Protocol.JSON))
             {
-                // string the protocol from the string and pass the data portion
+                // remove the protocol from the string and pass the data portion
                 src = src.Remove(0, Protocols.JSON_PREFIX.Length);
             }
 
@@ -67,10 +67,15 @@ namespace Hbx.Assets
                     // TODO will relying on exception work in builds?
                     // a user could provide an invalid json string and
                     // we want to be able to provide and error, not crash
-                    result = default;
                     exception = e;
                 }
             });
+
+            if(exception != null)
+            {
+                return new ILoaderResult<T>();
+            }
+
             return new ILoaderResult<T>(result);
         }
     }

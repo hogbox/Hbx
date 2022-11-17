@@ -14,7 +14,9 @@ public class Load : GenericSingleton<Load>
     public Load()
     {
         AddLoader(new DiskLoader());
+        AddLoader(new HttpLoader());
         AddLoader(new JsonLoader());
+        AddLoader(new ResourcesLoader());
     }
 
     public void AddLoader(ILoader loader)
