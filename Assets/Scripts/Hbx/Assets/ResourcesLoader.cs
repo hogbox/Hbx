@@ -14,7 +14,8 @@ using Hbx.Ext;
 namespace Hbx.Assets
 {
     /// <summary>
-    /// DiskLoader handles reading bytes or string from a file on the local file system
+    /// Resources loader handles loading assets from the Unity Resources system.
+    /// Uses the resources:// protocol to identify paths
     /// </summary>
     public class ResourcesLoader : FileLoader
     {
@@ -62,7 +63,7 @@ namespace Hbx.Assets
         /// <returns>Unity Resource object of type T if it exists at src path</returns>
         public override async Task<ILoaderResult<T>> ReadAsync<T>(string src, ILoaderOptions options)
         {
-            // check if this is an inline asset using the json:// protocol
+            // check if this is an inline asset using the resources:// protocol
             if (!Protocols.IsPathUsingProtocol(src, Protocol.RESOURCES))
             {
                 return new ILoaderResult<T>();
@@ -71,14 +72,17 @@ namespace Hbx.Assets
             // remove the protocol from the string leaving the resources path
             src = src.Remove(0, Protocols.RESOURCES_PREFIX.Length);
 
+            // get type and check if it's a raw asset (string or bytes)
             Type ttype = typeof(T);
             bool israw = Load.IsRawType(ttype);
 
+            // try to load the asset, if it was raw make sure we try to load as TextAsset
             ResourceRequest request = Resources.LoadAsync(src, israw ? typeof(TextAsset) : ttype);
             await request;
 
             if (israw)
             {
+                // if it's raw get the text asset the return the appropritate text or bytes
                 TextAsset textAsset = (TextAsset)request.asset;
                 if (textAsset == null) return new ILoaderResult<T>();
 
@@ -86,6 +90,7 @@ namespace Hbx.Assets
                 return new ILoaderResult<T>(result);
             }
 
+            // return the asset
             return new ILoaderResult<T>((T)(object)request.asset);
         }
     }
