@@ -19,8 +19,8 @@ MonoBehaviour:
     width: 2560
     height: 1327
   m_ShowMode: 4
-  m_Title: Scene
-  m_RootView: {fileID: 6}
+  m_Title: Project
+  m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
@@ -33,119 +33,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 9}
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 2560
-    height: 1277
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 0
-  controlID: 312
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1613
-    y: 0
-    width: 947
-    height: 1277
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
-  m_Panes:
-  - {fileID: 16}
-  - {fileID: 13}
-  - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 395.5
-    height: 772
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 772
-    width: 1613
-    height: 505
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 15}
-  m_Panes:
-  - {fileID: 15}
-  - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
   m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 2}
-  - {fileID: 8}
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -158,7 +52,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &7
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &8
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,7 +95,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &9
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,44 +108,95 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 10}
-  - {fileID: 5}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1613
-    height: 1277
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 313
---- !u!114 &10
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 4}
+  - {fileID: 6}
   - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
+    y: 30
+    width: 2560
+    height: 1277
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 377
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
     y: 0
-    width: 1613
-    height: 772
+    width: 1798
+    height: 1277
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 378
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 9}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1798
+    height: 773
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 82
---- !u!114 &11
+  controlID: 52
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 435.5
+    height: 773
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,17 +211,72 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 395.5
+    x: 435.5
     y: 0
-    width: 1217.5
-    height: 772
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+    width: 1362.5
+    height: 773
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 12}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 773
+    width: 1798
+    height: 504
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: InspectorWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1798
+    y: 0
+    width: 762
+    height: 1277
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
-  - {fileID: 14}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &12
@@ -287,1092 +287,91 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13854, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 310, y: 200}
+  m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Project Settings
-    m_Image: {fileID: 866346219090771560, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1129.5
-    y: 89
-    width: 661.5
-    height: 932
+    x: 435.5
+    y: 83
+    width: 1360.5
+    height: 752
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_PosLeft: {x: 0, y: 0}
-  m_PosRight: {x: 0, y: 0}
-  m_Scope: 1
-  m_SplitterFlex: 0.2
-  m_SearchText: 
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0478ab97
-    m_LastClickedID: -1750370300
-    m_ExpandedIDs: a01a5fa600000000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 2721, y: 1462}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -680.25
+    m_HBaseRangeMax: 680.25
+    m_VBaseRangeMin: -365.5
+    m_VBaseRangeMax: 365.5
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1360.5
+      height: 731
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 680.25, y: 365.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -680.25
+      y: -365.5
+      width: 1360.5
+      height: 731
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 2721, y: 1504}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 00000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
 --- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1613
-    y: 83
-    width: 946
-    height: 1256
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_Spl:
-    ID: 116
-    splitterInitialOffset: 0
-    currentActiveSplitter: -1
-    realSizes:
-    - 889.5
-    - 296.5
-    relativeSizes:
-    - 0.75
-    - 0.25
-    minSizes:
-    - 32
-    - 32
-    maxSizes:
-    - 0
-    - 0
-    lastTotalSize: 1186
-    splitSize: 6
-    xOffset: 0
-    m_Version: 1
-    oldRealSizes: 
-    oldMinSizes: 
-    oldMaxSizes: 
-    oldSplitSize: 0
-  m_TestTypeToolbarIndex: 0
-  m_PlayModeTestListGUI:
-    m_Window: {fileID: 13}
-    m_NewResultList:
-    - id: 1005
-      uniqueId: '[HbxLoader][suite]'
-      name: HbxLoader
-      fullName: HbxLoader
-      resultStatus: 1
-      duration: 94.60804
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    - id: 1033
-      uniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-      name: HbxUnitTests.dll
-      fullName: /Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll
-      resultStatus: 1
-      duration: 94.31632
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[HbxLoader][suite]'
-    - id: 1001
-      uniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
-      name: DiskLoaderUnitTests
-      fullName: DiskLoaderUnitTests
-      resultStatus: 1
-      duration: 0.118995
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1033
-      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1006
-      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanHandleInvalidReadType]
-      name: CanHandleInvalidReadType
-      fullName: DiskLoaderUnitTests.CanHandleInvalidReadType
-      resultStatus: 1
-      duration: 0.0244788
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
-    - id: 1002
-      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanReadDiskFileAsBytes]
-      name: CanReadDiskFileAsBytes
-      fullName: DiskLoaderUnitTests.CanReadDiskFileAsBytes
-      resultStatus: 1
-      duration: 0.0333276
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
-    - id: 1003
-      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanReadDiskFileAsText]
-      name: CanReadDiskFileAsText
-      fullName: DiskLoaderUnitTests.CanReadDiskFileAsText
-      resultStatus: 1
-      duration: 0.0252404
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
-    - id: 1004
-      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.ReturnsNullForMissingBytesFile]
-      name: ReturnsNullForMissingBytesFile
-      fullName: DiskLoaderUnitTests.ReturnsNullForMissingBytesFile
-      resultStatus: 1
-      duration: 0.01062
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
-    - id: 1005
-      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.ReturnsNullForMissingTextFile]
-      name: ReturnsNullForMissingTextFile
-      fullName: DiskLoaderUnitTests.ReturnsNullForMissingTextFile
-      resultStatus: 1
-      duration: 0.0073138
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
-    - id: 1007
-      uniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
-      name: HttpLoaderUnitTests
-      fullName: HttpLoaderUnitTests
-      resultStatus: 1
-      duration: 0.534697
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1033
-      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1008
-      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsBytes]
-      name: CanReadHttpFileAsBytes
-      fullName: HttpLoaderUnitTests.CanReadHttpFileAsBytes
-      resultStatus: 1
-      duration: 0.3326856
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
-    - id: 1009
-      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsText]
-      name: CanReadHttpFileAsText
-      fullName: HttpLoaderUnitTests.CanReadHttpFileAsText
-      resultStatus: 1
-      duration: 0.0258305
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
-    - id: 1010
-      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsTexture2D]
-      name: CanReadHttpFileAsTexture2D
-      fullName: HttpLoaderUnitTests.CanReadHttpFileAsTexture2D
-      resultStatus: 1
-      duration: 0.1705582
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
-    - id: 1007
-      uniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
-      name: JsonLoaderUnitTests
-      fullName: JsonLoaderUnitTests
-      resultStatus: 1
-      duration: 0.0940213
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1009
-      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/HbxLoader/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1014
-      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanHandleInvalidJsonString]
-      name: CanHandleInvalidJsonString
-      fullName: JsonLoaderUnitTests.CanHandleInvalidJsonString
-      resultStatus: 1
-      duration: 0.0380701
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1011
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
-    - id: 1013
-      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanReadJsonProtocolString]
-      name: CanReadJsonProtocolString
-      fullName: JsonLoaderUnitTests.CanReadJsonProtocolString
-      resultStatus: 1
-      duration: 0.0222301
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1011
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
-    - id: 1012
-      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanReadJsonString]
-      name: CanReadJsonString
-      fullName: JsonLoaderUnitTests.CanReadJsonString
-      resultStatus: 1
-      duration: 0.0180712
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1011
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
-    - id: 1015
-      uniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-      name: LoadUnitTests
-      fullName: LoadUnitTests
-      resultStatus: 1
-      duration: 1.3163255
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1033
-      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1016
-      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadBytesFromFile]
-      name: CanReadBytesFromFile
-      fullName: LoadUnitTests.CanReadBytesFromFile
-      resultStatus: 1
-      duration: 0.0412962
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-    - id: 1020
-      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpFileAsBytes]
-      name: CanReadHttpFileAsBytes
-      fullName: LoadUnitTests.CanReadHttpFileAsBytes
-      resultStatus: 1
-      duration: 0.7232469
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-    - id: 1021
-      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpFileAsText]
-      name: CanReadHttpFileAsText
-      fullName: LoadUnitTests.CanReadHttpFileAsText
-      resultStatus: 1
-      duration: 0.0276781
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-    - id: 1022
-      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpJsonFile]
-      name: CanReadHttpJsonFile
-      fullName: LoadUnitTests.CanReadHttpJsonFile
-      resultStatus: 1
-      duration: 0.3058075
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-    - id: 1023
-      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpTexture2D]
-      name: CanReadHttpTexture2D
-      fullName: LoadUnitTests.CanReadHttpTexture2D
-      resultStatus: 1
-      duration: 0.160821
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-    - id: 1018
-      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadJsonFile]
-      name: CanReadJsonFile
-      fullName: LoadUnitTests.CanReadJsonFile
-      resultStatus: 1
-      duration: 0.0128361
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-    - id: 1019
-      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadJsonProtocol]
-      name: CanReadJsonProtocol
-      fullName: LoadUnitTests.CanReadJsonProtocol
-      resultStatus: 1
-      duration: 0.0098537
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-    - id: 1017
-      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadTextFromFile]
-      name: CanReadTextFromFile
-      fullName: LoadUnitTests.CanReadTextFromFile
-      resultStatus: 1
-      duration: 0.0161398
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
-    - id: 1009
-      uniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-      name: ProtocolsUnitTests
-      fullName: ProtocolsUnitTests
-      resultStatus: 1
-      duration: 0.0099248
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1016
-      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/HbxLoader/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1015
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsAddressablePrefixForProtocol]
-      name: ReturnsAddressablePrefixForProtocol
-      fullName: ProtocolsUnitTests.ReturnsAddressablePrefixForProtocol
-      resultStatus: 1
-      duration: 0.0015283
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1021
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsAddressableProtocolForAddressPath]
-      name: ReturnsAddressableProtocolForAddressPath
-      fullName: ProtocolsUnitTests.ReturnsAddressableProtocolForAddressPath
-      resultStatus: 1
-      duration: 0.0002083
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1010
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsFilePrefixForProtocol]
-      name: ReturnsFilePrefixForProtocol
-      fullName: ProtocolsUnitTests.ReturnsFilePrefixForProtocol
-      resultStatus: 1
-      duration: 0.000159
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1016
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsFileProtocolForFilePath]
-      name: ReturnsFileProtocolForFilePath
-      fullName: ProtocolsUnitTests.ReturnsFileProtocolForFilePath
-      resultStatus: 1
-      duration: 0.0001654
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1011
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsHttpPrefixForProtocol]
-      name: ReturnsHttpPrefixForProtocol
-      fullName: ProtocolsUnitTests.ReturnsHttpPrefixForProtocol
-      resultStatus: 1
-      duration: 0.0001495
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1016
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsHttpProtocolForHttpPath]
-      name: ReturnsHttpProtocolForHttpPath
-      fullName: ProtocolsUnitTests.ReturnsHttpProtocolForHttpPath
-      resultStatus: 1
-      duration: 0.000164
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1012
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsHttpsPrefixForProtocol]
-      name: ReturnsHttpsPrefixForProtocol
-      fullName: ProtocolsUnitTests.ReturnsHttpsPrefixForProtocol
-      resultStatus: 1
-      duration: 0.0001465
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1018
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsHttpsProtocolForHttpsPath]
-      name: ReturnsHttpsProtocolForHttpsPath
-      fullName: ProtocolsUnitTests.ReturnsHttpsProtocolForHttpsPath
-      resultStatus: 1
-      duration: 0.0001631
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1013
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsJsonPrefixForProtocol]
-      name: ReturnsJsonPrefixForProtocol
-      fullName: ProtocolsUnitTests.ReturnsJsonPrefixForProtocol
-      resultStatus: 1
-      duration: 0.0001474
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1019
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsJsonProtocolForJsonPath]
-      name: ReturnsJsonProtocolForJsonPath
-      fullName: ProtocolsUnitTests.ReturnsJsonProtocolForJsonPath
-      resultStatus: 1
-      duration: 0.0001862
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1014
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsResourcesPrefixForProtocol]
-      name: ReturnsResourcesPrefixForProtocol
-      fullName: ProtocolsUnitTests.ReturnsResourcesPrefixForProtocol
-      resultStatus: 1
-      duration: 0.0001571
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1020
-      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsResourcesProtocolForResourcePath]
-      name: ReturnsResourcesProtocolForResourcePath
-      fullName: ProtocolsUnitTests.ReturnsResourcesProtocolForResourcePath
-      resultStatus: 1
-      duration: 0.0001693
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
-    - id: 1037
-      uniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
-      name: ResourcesLoaderUnitTests
-      fullName: ResourcesLoaderUnitTests
-      resultStatus: 1
-      duration: 94.3101
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1041
-      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
-    - id: 1039
-      uniqueId: HbxUnitTests.dll/ResourcesLoaderUnitTests/[HbxUnitTests][ResourcesLoaderUnitTests.CanLoadResourcesTextAsset]
-      name: CanLoadResourcesTextAsset
-      fullName: ResourcesLoaderUnitTests.CanLoadResourcesTextAsset
-      resultStatus: 1
-      duration: 94.28455
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1037
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
-    - id: 1038
-      uniqueId: HbxUnitTests.dll/ResourcesLoaderUnitTests/[HbxUnitTests][ResourcesLoaderUnitTests.CanLoadResourcesTexture2D]
-      name: CanLoadResourcesTexture2D
-      fullName: ResourcesLoaderUnitTests.CanLoadResourcesTexture2D
-      resultStatus: 1
-      duration: 0.0213887
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1037
-      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
-    m_ResultText: CanLoadResourcesTextAsset (94.285s)
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4236b5df
-      m_LastClickedID: -541772222
-      m_ExpandedIDs: 27ac839c57efb29fc0c43aa2ad96c4a5b29fd7d5b06ff0e9a29207f3d7c9850bfbe7c30ce0dcbb178f504f4d02a68b50340a4973ffe7e57bffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
-    m_SelectedOption: 0
-  m_EditModeTestListGUI:
-    m_Window: {fileID: 13}
-    m_NewResultList:
-    - id: 1000
-      uniqueId: '[HbxLoader][suite]'
-      name: HbxLoader
-      fullName: HbxLoader
-      resultStatus: 1
-      duration: 0.0910671
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    m_ResultText: DiskLoaderUnitTestsSimplePasses (0.000s)
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0a6fc32d
-      m_LastClickedID: 767782666
-      m_ExpandedIDs: a29ddb84ad96c4a50767e81cffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
---- !u!114 &14
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 400, y: 100}
-  m_MaxSize: {x: 2048, y: 2048}
-  m_TitleContent:
-    m_Text: Asset Store
-    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 468
-    y: 181
-    width: 973
-    height: 501
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 855
-    width: 1612
-    height: 484
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_VersionControlStates: []
-    m_SoftLockControlStates: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets/Resources/unittest
-    m_Globs: []
-    m_OriginalText: 
-  m_ViewMode: 1
-  m_StartGridSize: 16
-  m_LastFolders:
-  - Assets/Resources/unittest
-  m_LastFoldersGridSize: 16
-  m_LastProjectPath: /Users/thomashogarth/Documents/hogbox/unityplugins/Hbx
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 685d0000
-    m_LastClickedID: 23912
-    m_ExpandedIDs: 00000000985a0000285b0000365b00005c5d000000ca9a3b
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000985a0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 16
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 200
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1613
-    y: 83
-    width: 946
-    height: 1256
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1394,8 +393,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 83
-    width: 394.5
-    height: 751
+    width: 434.5
+    height: 752
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1403,9 +402,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: b65b0000
       m_LastClickedID: 0
-      m_ExpandedIDs: facdffff44ceffff84cfffff9cd1ffffe6d1ffff2ed3ffffe8d3ffff32d4ffff72d5ffffb2d5fffffcd5ffff44d7ffff04d8ffff4ed8ffff96d9fffff2deffff3cdfffffb6e0fffff2e0ffff3ce1ffff8ce2ffff5ae3ffffa4e3ffff16e5ffffdee5ffff28e6ffff50e8ffff8ce8ffffd6e8ffff16eaffff74eaffffbeeaffffe6ecffffaeedfffff8edffff0af0ffffe2f0ffff2cf1ffff3ef3ffffdcf4ffff26f5ffff38f7ffff04f8ffff4ef8ffff94f9ffff32fbffff
+      m_ExpandedIDs: 20f3ffff30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1421,7 +420,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1429,7 +428,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 92b163dc456b649e28cc9a431046d3bd
---- !u!114 &18
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1449,10 +448,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 395.5
+    x: 435.5
     y: 83
-    width: 1215.5
-    height: 751
+    width: 1360.5
+    height: 752
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1654,9 +653,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 121.24347, y: 88.47652, z: 57.030087}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 121.24347, y: 88.47652, z: 57.030087}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1682,7 +681,7 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     yGrid:
       m_Fade:
         m_Target: 1
@@ -1698,22 +697,22 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: 0.008999342, y: -0.010499387, z: 0.000094494404, w: 0.9999048}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: 0.008999339, y: -0.010499383, z: 0.00009449437, w: 0.99990445}
   m_Size:
-    m_Target: 10
+    m_Target: 1141.8276
     speed: 2
-    m_Value: 10
+    m_Value: 1141.8276
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1734,7 +733,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1743,90 +742,166 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Asset Store
+    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 395.5
-    y: 83
-    width: 1215.5
-    height: 751
+    x: 468
+    y: 181
+    width: 973
+    height: 501
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 2431, y: 1460}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -607.75
-    m_HBaseRangeMax: 607.75
-    m_VBaseRangeMin: -365
-    m_VBaseRangeMax: 365
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 1215.5
-      height: 730
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 607.75, y: 365}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -607.75
-      y: -365
-      width: 1215.5
-      height: 730
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2431, y: 1502}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 00000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
---- !u!114 &20
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 856
+    width: 1797
+    height: 483
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Scripts/Hbx/Assets
+    m_Globs: []
+    m_OriginalText: 
+  m_ViewMode: 1
+  m_StartGridSize: 16
+  m_LastFolders:
+  - Assets/Scripts/Hbx/Assets
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: /Users/thomashogarth/Documents/hogbox/unityplugins/Hbx
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: a05b0000
+    m_LastClickedID: 23456
+    m_ExpandedIDs: 00000000c65a0000c85a0000ca5a0000cc5a0000ce5a0000d05a000000ca9a3b
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000c65a0000c85a0000ca5a0000cc5a0000ce5a0000d05a0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: TextureFileFormatPNG
+      m_OriginalName: TextureFileFormatPNG
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 23478
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 0
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 16
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 200
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1847,10 +922,1087 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 855
-    width: 1612
-    height: 484
+    y: 856
+    width: 1797
+    height: 483
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1798
+    y: 83
+    width: 761
+    height: 1256
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 649
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1798
+    y: 83
+    width: 761
+    height: 1256
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 126
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 889.5
+    - 296.5
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 1186
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 19}
+    m_NewResultList:
+    - id: 1005
+      uniqueId: '[HbxLoader][suite]'
+      name: HbxLoader
+      fullName: HbxLoader
+      resultStatus: 1
+      duration: 2.3284276
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1042
+      uniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+      name: HbxUnitTests.dll
+      fullName: /Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll
+      resultStatus: 1
+      duration: 2.0903215
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[HbxLoader][suite]'
+    - id: 1001
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+      name: DiskLoaderUnitTests
+      fullName: DiskLoaderUnitTests
+      resultStatus: 1
+      duration: 0.1301496
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1006
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanHandleInvalidReadType]
+      name: CanHandleInvalidReadType
+      fullName: DiskLoaderUnitTests.CanHandleInvalidReadType
+      resultStatus: 1
+      duration: 0.0288544
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1002
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanReadDiskFileAsBytes]
+      name: CanReadDiskFileAsBytes
+      fullName: DiskLoaderUnitTests.CanReadDiskFileAsBytes
+      resultStatus: 1
+      duration: 0.0362324
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1003
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.CanReadDiskFileAsText]
+      name: CanReadDiskFileAsText
+      fullName: DiskLoaderUnitTests.CanReadDiskFileAsText
+      resultStatus: 1
+      duration: 0.0284765
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1004
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.ReturnsNullForMissingBytesFile]
+      name: ReturnsNullForMissingBytesFile
+      fullName: DiskLoaderUnitTests.ReturnsNullForMissingBytesFile
+      resultStatus: 1
+      duration: 0.0103993
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1005
+      uniqueId: HbxUnitTests.dll/DiskLoaderUnitTests/[HbxUnitTests][DiskLoaderUnitTests.ReturnsNullForMissingTextFile]
+      name: ReturnsNullForMissingTextFile
+      fullName: DiskLoaderUnitTests.ReturnsNullForMissingTextFile
+      resultStatus: 1
+      duration: 0.0083319
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][DiskLoaderUnitTests][suite]
+    - id: 1007
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
+      name: HttpLoaderUnitTests
+      fullName: HttpLoaderUnitTests
+      resultStatus: 1
+      duration: 0.5078403
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1008
+      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsBytes]
+      name: CanReadHttpFileAsBytes
+      fullName: HttpLoaderUnitTests.CanReadHttpFileAsBytes
+      resultStatus: 1
+      duration: 0.2662756
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
+    - id: 1009
+      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsText]
+      name: CanReadHttpFileAsText
+      fullName: HttpLoaderUnitTests.CanReadHttpFileAsText
+      resultStatus: 1
+      duration: 0.0301832
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
+    - id: 1010
+      uniqueId: HbxUnitTests.dll/HttpLoaderUnitTests/[HbxUnitTests][HttpLoaderUnitTests.CanReadHttpFileAsTexture2D]
+      name: CanReadHttpFileAsTexture2D
+      fullName: HttpLoaderUnitTests.CanReadHttpFileAsTexture2D
+      resultStatus: 1
+      duration: 0.2056019
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][HttpLoaderUnitTests][suite]
+    - id: 1011
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
+      name: JsonLoaderUnitTests
+      fullName: JsonLoaderUnitTests
+      resultStatus: 1
+      duration: 0.0401045
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1014
+      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanHandleInvalidJsonString]
+      name: CanHandleInvalidJsonString
+      fullName: JsonLoaderUnitTests.CanHandleInvalidJsonString
+      resultStatus: 1
+      duration: 0.01315
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
+    - id: 1013
+      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanReadJsonProtocolString]
+      name: CanReadJsonProtocolString
+      fullName: JsonLoaderUnitTests.CanReadJsonProtocolString
+      resultStatus: 1
+      duration: 0.0114922
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
+    - id: 1012
+      uniqueId: HbxUnitTests.dll/JsonLoaderUnitTests/[HbxUnitTests][JsonLoaderUnitTests.CanReadJsonString]
+      name: CanReadJsonString
+      fullName: JsonLoaderUnitTests.CanReadJsonString
+      resultStatus: 1
+      duration: 0.0088253
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][JsonLoaderUnitTests][suite]
+    - id: 1015
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+      name: LoadUnitTests
+      fullName: LoadUnitTests
+      resultStatus: 1
+      duration: 0.316392
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1025
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanLoadResourcesTextAsset]
+      name: CanLoadResourcesTextAsset
+      fullName: LoadUnitTests.CanLoadResourcesTextAsset
+      resultStatus: 1
+      duration: 0.0129759
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1027
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanLoadResourcesTextAssetAsBytes]
+      name: CanLoadResourcesTextAssetAsBytes
+      fullName: LoadUnitTests.CanLoadResourcesTextAssetAsBytes
+      resultStatus: 1
+      duration: 0.0104275
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1026
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanLoadResourcesTextAssetAsString]
+      name: CanLoadResourcesTextAssetAsString
+      fullName: LoadUnitTests.CanLoadResourcesTextAssetAsString
+      resultStatus: 1
+      duration: 0.0092535
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1024
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanLoadResourcesTexture2D]
+      name: CanLoadResourcesTexture2D
+      fullName: LoadUnitTests.CanLoadResourcesTexture2D
+      resultStatus: 1
+      duration: 0.0098774
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1016
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadBytesFromFile]
+      name: CanReadBytesFromFile
+      fullName: LoadUnitTests.CanReadBytesFromFile
+      resultStatus: 1
+      duration: 0.0107013
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1020
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpFileAsBytes]
+      name: CanReadHttpFileAsBytes
+      fullName: LoadUnitTests.CanReadHttpFileAsBytes
+      resultStatus: 1
+      duration: 0.0346534
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1021
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpFileAsText]
+      name: CanReadHttpFileAsText
+      fullName: LoadUnitTests.CanReadHttpFileAsText
+      resultStatus: 1
+      duration: 0.0247733
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1022
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpJsonFile]
+      name: CanReadHttpJsonFile
+      fullName: LoadUnitTests.CanReadHttpJsonFile
+      resultStatus: 1
+      duration: 0.1360297
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1023
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadHttpTexture2D]
+      name: CanReadHttpTexture2D
+      fullName: LoadUnitTests.CanReadHttpTexture2D
+      resultStatus: 1
+      duration: 0.0291546
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1018
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadJsonFile]
+      name: CanReadJsonFile
+      fullName: LoadUnitTests.CanReadJsonFile
+      resultStatus: 1
+      duration: 0.01276
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1019
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadJsonProtocol]
+      name: CanReadJsonProtocol
+      fullName: LoadUnitTests.CanReadJsonProtocol
+      resultStatus: 1
+      duration: 0.0080515
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1017
+      uniqueId: HbxUnitTests.dll/LoadUnitTests/[HbxUnitTests][LoadUnitTests.CanReadTextFromFile]
+      name: CanReadTextFromFile
+      fullName: LoadUnitTests.CanReadTextFromFile
+      resultStatus: 1
+      duration: 0.0088498
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][LoadUnitTests][suite]
+    - id: 1024
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+      name: ProtocolsUnitTests
+      fullName: ProtocolsUnitTests
+      resultStatus: 1
+      duration: 0.0109037
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1030
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsAddressablePrefixForProtocol]
+      name: ReturnsAddressablePrefixForProtocol
+      fullName: ProtocolsUnitTests.ReturnsAddressablePrefixForProtocol
+      resultStatus: 1
+      duration: 0.0012231
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1036
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsAddressableProtocolForAddressPath]
+      name: ReturnsAddressableProtocolForAddressPath
+      fullName: ProtocolsUnitTests.ReturnsAddressableProtocolForAddressPath
+      resultStatus: 1
+      duration: 0.0003943
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1025
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsFilePrefixForProtocol]
+      name: ReturnsFilePrefixForProtocol
+      fullName: ProtocolsUnitTests.ReturnsFilePrefixForProtocol
+      resultStatus: 1
+      duration: 0.0002224
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1031
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsFileProtocolForFilePath]
+      name: ReturnsFileProtocolForFilePath
+      fullName: ProtocolsUnitTests.ReturnsFileProtocolForFilePath
+      resultStatus: 1
+      duration: 0.0002284
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1026
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsHttpPrefixForProtocol]
+      name: ReturnsHttpPrefixForProtocol
+      fullName: ProtocolsUnitTests.ReturnsHttpPrefixForProtocol
+      resultStatus: 1
+      duration: 0.000177
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1032
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsHttpProtocolForHttpPath]
+      name: ReturnsHttpProtocolForHttpPath
+      fullName: ProtocolsUnitTests.ReturnsHttpProtocolForHttpPath
+      resultStatus: 1
+      duration: 0.0002729
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1027
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsHttpsPrefixForProtocol]
+      name: ReturnsHttpsPrefixForProtocol
+      fullName: ProtocolsUnitTests.ReturnsHttpsPrefixForProtocol
+      resultStatus: 1
+      duration: 0.0001889
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1033
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsHttpsProtocolForHttpsPath]
+      name: ReturnsHttpsProtocolForHttpsPath
+      fullName: ProtocolsUnitTests.ReturnsHttpsProtocolForHttpsPath
+      resultStatus: 1
+      duration: 0.0002065
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1028
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsJsonPrefixForProtocol]
+      name: ReturnsJsonPrefixForProtocol
+      fullName: ProtocolsUnitTests.ReturnsJsonPrefixForProtocol
+      resultStatus: 1
+      duration: 0.0002252
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1034
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsJsonProtocolForJsonPath]
+      name: ReturnsJsonProtocolForJsonPath
+      fullName: ProtocolsUnitTests.ReturnsJsonProtocolForJsonPath
+      resultStatus: 1
+      duration: 0.0001914
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1029
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsResourcesPrefixForProtocol]
+      name: ReturnsResourcesPrefixForProtocol
+      fullName: ProtocolsUnitTests.ReturnsResourcesPrefixForProtocol
+      resultStatus: 1
+      duration: 0.0001716
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1035
+      uniqueId: HbxUnitTests.dll/ProtocolsUnitTests/[HbxUnitTests][ProtocolsUnitTests.ReturnsResourcesProtocolForResourcePath]
+      name: ReturnsResourcesProtocolForResourcePath
+      fullName: ProtocolsUnitTests.ReturnsResourcesProtocolForResourcePath
+      resultStatus: 1
+      duration: 0.0001959
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ProtocolsUnitTests][suite]
+    - id: 1037
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
+      name: ResourcesLoaderUnitTests
+      fullName: ResourcesLoaderUnitTests
+      resultStatus: 1
+      duration: 0.0368545
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1039
+      uniqueId: HbxUnitTests.dll/ResourcesLoaderUnitTests/[HbxUnitTests][ResourcesLoaderUnitTests.CanLoadResourcesTextAsset]
+      name: CanLoadResourcesTextAsset
+      fullName: ResourcesLoaderUnitTests.CanLoadResourcesTextAsset
+      resultStatus: 1
+      duration: 0.0058868
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
+    - id: 1041
+      uniqueId: HbxUnitTests.dll/ResourcesLoaderUnitTests/[HbxUnitTests][ResourcesLoaderUnitTests.CanLoadResourcesTextAssetAsBytes]
+      name: CanLoadResourcesTextAssetAsBytes
+      fullName: ResourcesLoaderUnitTests.CanLoadResourcesTextAssetAsBytes
+      resultStatus: 1
+      duration: 0.0082556
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
+    - id: 1040
+      uniqueId: HbxUnitTests.dll/ResourcesLoaderUnitTests/[HbxUnitTests][ResourcesLoaderUnitTests.CanLoadResourcesTextAssetAsString]
+      name: CanLoadResourcesTextAssetAsString
+      fullName: ResourcesLoaderUnitTests.CanLoadResourcesTextAssetAsString
+      resultStatus: 1
+      duration: 0.0079215
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
+    - id: 1038
+      uniqueId: HbxUnitTests.dll/ResourcesLoaderUnitTests/[HbxUnitTests][ResourcesLoaderUnitTests.CanLoadResourcesTexture2D]
+      name: CanLoadResourcesTexture2D
+      fullName: ResourcesLoaderUnitTests.CanLoadResourcesTexture2D
+      resultStatus: 1
+      duration: 0.0084099
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][ResourcesLoaderUnitTests][suite]
+    - id: 1046
+      uniqueId: HbxUnitTests.dll/[HbxUnitTests][TextureLoaderUnitTests][suite]
+      name: TextureLoaderUnitTests
+      fullName: TextureLoaderUnitTests
+      resultStatus: 1
+      duration: 1.0330952
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1048
+      parentUniqueId: '[HbxUnitTests][/Users/thomashogarth/Documents/hogbox/unityplugins/Hbx/Library/ScriptAssemblies/HbxUnitTests.dll][suite]'
+    - id: 1048
+      uniqueId: HbxUnitTests.dll/TextureLoaderUnitTests/[HbxUnitTests][TextureLoaderUnitTests.CanDrawLoadedDDS]
+      name: CanDrawLoadedDDS
+      fullName: TextureLoaderUnitTests.CanDrawLoadedDDS
+      resultStatus: 1
+      duration: 1.016483
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][TextureLoaderUnitTests][suite]
+    - id: 1047
+      uniqueId: HbxUnitTests.dll/TextureLoaderUnitTests/[HbxUnitTests][TextureLoaderUnitTests.CanReadDDSTextureBytes]
+      name: CanReadDDSTextureBytes
+      fullName: TextureLoaderUnitTests.CanReadDDSTextureBytes
+      resultStatus: 1
+      duration: 0.0115136
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: HbxUnitTests.dll/[HbxUnitTests][TextureLoaderUnitTests][suite]
+    m_ResultText: CanDrawLoadedDDS (1.016s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: ce32ba60
+      m_LastClickedID: 1622815438
+      m_ExpandedIDs: 27ac839c57efb29fc0c43aa2ad96c4a5b29fd7d5b06ff0e9a29207f34602f6fdd7c9850bfbe7c30ce0dcbb178f504f4d02a68b50340a4973ffe7e57bffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 19}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[HbxLoader][suite]'
+      name: HbxLoader
+      fullName: HbxLoader
+      resultStatus: 1
+      duration: 0.0910671
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: DiskLoaderUnitTestsSimplePasses (0.000s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 0a6fc32d
+      m_LastClickedID: 767782666
+      m_ExpandedIDs: a29ddb84ad96c4a50767e81cffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13854, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 310, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Project Settings
+    m_Image: {fileID: 866346219090771560, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1129.5
+    y: 89
+    width: 661.5
+    height: 932
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_PosLeft: {x: 0, y: 0}
+  m_PosRight: {x: 0, y: 0}
+  m_Scope: 1
+  m_SplitterFlex: 0.2
+  m_SearchText: 
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 0478ab97
+    m_LastClickedID: -1750370300
+    m_ExpandedIDs: a01a5fa600000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 

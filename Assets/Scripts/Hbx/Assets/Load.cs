@@ -17,6 +17,7 @@ public class Load : GenericSingleton<Load>
         AddLoader(new HttpLoader());
         AddLoader(new JsonLoader());
         AddLoader(new ResourcesLoader());
+        AddLoader(new TextureLoader());
     }
 
     public void AddLoader(ILoader loader)
@@ -34,7 +35,10 @@ public class Load : GenericSingleton<Load>
 
     public async Task<ILoaderResult<T>> ReadAsync<T>(string src, ILoaderOptions options = null)
     {
-        // first find loaders to handle the protocol, this is because
+        if (options == null) options = new LoaderOptions();
+        options.setOriginalSrcIfEmpty(src);
+
+        // Find loaders to handle the protocol, this is because
         // things like json://, resource://, address:// don't use extensions
         // meaning the protocol is the key piece of information
         Protocol protocol = Protocols.ProtocolForPath(src);

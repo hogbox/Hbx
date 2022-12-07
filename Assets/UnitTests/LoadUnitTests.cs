@@ -40,6 +40,20 @@ public class LoadUnitTests
         Assert.AreEqual(UnitTestData.MyHelloTextString, strresult.data);
     }
 
+    [Test]
+    public async Task CanReadTextureFromFile()
+    {
+        // arrange
+        string filepath = UnitTestData.HbxTinyPvrPath;
+
+        // act
+        ILoaderResult<Texture2D> texresult = await Load.Get.ReadAsync<Texture2D>(filepath, null);
+
+        // assert
+        Assert.AreEqual(true, texresult.valid);
+        Assert.AreEqual(64, texresult.data.width);
+    }
+
     //
     // Json
     //
@@ -123,6 +137,20 @@ public class LoadUnitTests
     {
         // arrange
         string url = UnitTestData.HbxTinyJpegPathUrl;
+
+        // act
+        ILoaderResult<Texture2D> texresult = await Load.Get.ReadAsync<Texture2D>(url, null);
+
+        // assert
+        Assert.AreEqual(true, texresult.valid);
+        Assert.AreEqual(64, texresult.data.width);
+    }
+
+    [Test]
+    public async Task CanReadHttpPvrTexture2D()
+    {
+        // arrange
+        string url = UnitTestData.HbxTinyPvrPathUrl;
 
         // act
         ILoaderResult<Texture2D> texresult = await Load.Get.ReadAsync<Texture2D>(url, null);

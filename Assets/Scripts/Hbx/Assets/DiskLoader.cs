@@ -46,11 +46,15 @@ namespace Hbx.Assets
         /// <returns>Depending on T can return btye array or string</returns>
         public override async Task<ILoaderResult<T>> ReadAsync<T>(string src, ILoaderOptions options)
         {
+            if (options == null) options = defaultOptions;
+            options.setOriginalSrcIfEmpty(src);
+
             if (!File.Exists(src)) return new ILoaderResult<T>();
 
             if (typeof(T) == typeof(byte[]))
             {
                 byte[] bytes = await File.ReadAllBytesAsync(src);
+                options.loadedBytes = bytes;
                 return new ILoaderResult<T>((T)(object)bytes);
             }
             else if(typeof(T) == typeof(string))

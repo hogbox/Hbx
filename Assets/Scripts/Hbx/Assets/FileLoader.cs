@@ -34,9 +34,9 @@ namespace Hbx.Assets
         public abstract string[] protocols { get; }
 
         /// <summary>
-        /// No default options, conrete type should implement if needed
+        /// Return a new LoaderOptions instance
         /// </summary>
-        public virtual ILoaderOptions defaultOptions => null;
+        public virtual ILoaderOptions defaultOptions => new LoaderOptions();
 
         /// <summary>
         /// Not implemented concrete type should implement

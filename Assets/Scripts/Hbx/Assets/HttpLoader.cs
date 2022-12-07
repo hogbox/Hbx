@@ -52,6 +52,9 @@ namespace Hbx.Assets
         /// <returns>Depending on T returns either byte array or string of the contents of the file</returns>
         public override async Task<ILoaderResult<T>> ReadAsync<T>(string src, ILoaderOptions options)
         {
+            if (options == null) options = defaultOptions;
+            options.setOriginalSrcIfEmpty(src);
+
             UnityWebRequest wr = new UnityWebRequest(); // Completely blank
             wr.url = src;
             wr.method = UnityWebRequest.kHttpVerbGET;
@@ -60,7 +63,9 @@ namespace Hbx.Assets
             wr.redirectLimit = 10;
             wr.timeout = 60;
 
-            if (typeof(T) == typeof(Texture2D))
+            Type ttype = typeof(T);
+
+            if (ttype == typeof(Texture2D))
             {
                 wr.downloadHandler = new DownloadHandlerTexture(false);
             }
@@ -80,20 +85,23 @@ namespace Hbx.Assets
             }
             else
             {
+                // store the downloaded bytes incase we're not handling here
+                options.loadedBytes = wr.downloadHandler.data;
+
                 // do we just want raw bytes
-                if (typeof(T) == typeof(byte[]))
+                if (ttype == typeof(byte[]))
                 {
                     byte[] bytes = wr.downloadHandler.data;
                     result = (T)(object)bytes;
                 }
                 // do we just want raw text
-                else if(typeof(T) == typeof(string))
+                else if(ttype == typeof(string))
                 {
                     string str = wr.downloadHandler.text;
                     result = (T)(object)str;
                 }
                 // do we want a texture2d
-                else if(typeof(T) == typeof(Texture2D))
+                else if(ttype == typeof(Texture2D))
                 {
                     DownloadHandlerTexture texd = (DownloadHandlerTexture)wr.downloadHandler;
                     result = (T)(object)texd.texture;

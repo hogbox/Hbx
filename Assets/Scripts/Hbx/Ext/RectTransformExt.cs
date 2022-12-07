@@ -4,14 +4,17 @@
 // RectTransformExt.cs
 //----------------------------------------------
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Hbx.Ext
 {
     public static class RectTransformExt
     {
+        /// <summary>
+        /// Make a rect transform fill its parent
+        /// </summary>
+        /// <param name="aRect">The rect transform we want to resize</param>
+        /// <param name="aPadding">Any padding we want to add</param>
         public static void StretchToParentSize(this RectTransform aRect, Vector2 aPadding)
         {
             aRect.anchorMin = new Vector2(0f, 0f);

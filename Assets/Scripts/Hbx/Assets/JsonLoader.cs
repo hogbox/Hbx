@@ -47,6 +47,9 @@ namespace Hbx.Assets
         /// <returns>GenericResult T</returns>
         public override async Task<ILoaderResult<T>> ReadAsync<T>(string src, ILoaderOptions options)
         {
+            if (options == null) options = defaultOptions;
+            options.setOriginalSrcIfEmpty(src);
+
             // check if this is an inline asset using the json:// protocol
             if (Protocols.IsPathUsingProtocol(src, Protocol.JSON))
             {

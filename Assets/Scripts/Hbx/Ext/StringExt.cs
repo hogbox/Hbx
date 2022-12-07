@@ -4,9 +4,7 @@
 // StringExt.cs
 //----------------------------------------------
 
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Hbx.Ext
 {

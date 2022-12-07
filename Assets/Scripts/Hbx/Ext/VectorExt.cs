@@ -13,171 +13,191 @@ namespace Hbx.Ext
 
     public static class Vector2Ext
     {
-        public static readonly Vector2 zero = new Vector2(0f,0f);
+        /// <summary>
+        /// Preallocated zero vectro
+        /// </summary>
+        public static readonly Vector2 zero = new Vector2(0f, 0f);
+
+        /// <summary>
+        /// Preallocated 1,1 vector
+        /// </summary>
         public static readonly Vector2 one = new Vector2(1f, 1f);
+
+        /// <summary>
+        /// Preallocated vector to represent an invalid vector
+        /// </summary>
         public static readonly Vector2 invalid = new Vector2(float.MinValue, float.MinValue);
 
+        /// <summary>
+        /// Preallocated vector to use for temp storage in operations
+        /// </summary>
         public static Vector2 temp = Vector2.zero;
 
-        public static void FromVector3(this Vector2 aVector2, ref Vector3 aVector3, PlaneAxis aPlane = PlaneAxis.XY)
+        /// <summary>
+        /// Set this Vector2 from a Vector3 PlaneAxis will determine which two elements are used
+        /// </summary>
+        /// <param name="v2">The Vector2 calling the function</param>
+        /// <param name="v3">The Vector3 we want to copy values from</param>
+        /// <param name="planeAxis">The PlaneAxis determining which values to copy</param>
+        public static void FromVector3(this Vector2 v2, ref Vector3 v3, PlaneAxis planeAxis = PlaneAxis.XY)
         {
-            switch(aPlane)
+            switch (planeAxis)
             {
                 case PlaneAxis.XY:
-                {
-                    aVector2.x = aVector3.x; aVector2.y = aVector3.y;
-                    break;
-                }
+                    {
+                        v2.Set(v3.x, v3.y);
+                        break;
+                    }
                 case PlaneAxis.XZ:
-                {
-                    aVector2.x = aVector3.x; aVector2.y = aVector3.z;
-                    break;
-                }
+                    {
+                        v2.x = v3.x; v2.y = v3.z;
+                        break;
+                    }
                 case PlaneAxis.ZY:
-                {
-                    aVector2.x = aVector3.z; aVector2.y = aVector3.y;
-                    break;
-                }
-                default: break;
-            }
-        }
-    
-        // todo, can above just call this, we need this one to call on elements in ref arrays
-        public static void FromVector3(ref Vector2 aVector2, ref Vector3 aVector3, PlaneAxis aPlane = PlaneAxis.XY)
-        {
-            switch(aPlane)
-            {
-                case PlaneAxis.XY:
-                {
-                    aVector2.x = aVector3.x; aVector2.y = aVector3.y;
-                    break;
-                }
-                case PlaneAxis.XZ:
-                {
-                    aVector2.x = aVector3.x; aVector2.y = aVector3.z;
-                    break;
-                }
-                case PlaneAxis.ZY:
-                {
-                    aVector2.x = aVector3.z; aVector2.y = aVector3.y;
-                    break;
-                }
+                    {
+                        v2.x = v3.z; v2.y = v3.y;
+                        break;
+                    }
                 default: break;
             }
         }
 
-        public static Vector3 ToVector3(this Vector2 aVector2, PlaneAxis aPlane = PlaneAxis.XY, float defaultZ = 0.0f)
+        // todo, can above just call this, we need this one to call on elements in ref arrays
+        public static void FromVector3(ref Vector2 v2, ref Vector3 v3, PlaneAxis planeAxis = PlaneAxis.XY)
         {
-            aVector2.ToVector3(ref Vector3Ext.temp, aPlane, defaultZ);
+            switch (planeAxis)
+            {
+                case PlaneAxis.XY:
+                    {
+                        v2.x = v3.x; v2.y = v3.y;
+                        break;
+                    }
+                case PlaneAxis.XZ:
+                    {
+                        v2.x = v3.x; v2.y = v3.z;
+                        break;
+                    }
+                case PlaneAxis.ZY:
+                    {
+                        v2.x = v3.z; v2.y = v3.y;
+                        break;
+                    }
+                default: break;
+            }
+        }
+
+        public static Vector3 ToVector3(this Vector2 v2, PlaneAxis planeAxis = PlaneAxis.XY, float defaultZ = 0.0f)
+        {
+            v2.ToVector3(ref Vector3Ext.temp, planeAxis, defaultZ);
             return Vector3Ext.temp;
         }
 
-        public static void ToVector3(this Vector2 aVector2, ref Vector3 aVector3, PlaneAxis aPlane = PlaneAxis.XY, float defaultZ = 0.0f)
+        public static void ToVector3(this Vector2 v2, ref Vector3 v3, PlaneAxis planeAxis = PlaneAxis.XY, float defaultZ = 0.0f)
         {
-            Vector3Ext.FromVector2(ref aVector3, ref aVector2, aPlane, defaultZ);
+            Vector3Ext.FromVector2(ref v3, ref v2, planeAxis, defaultZ);
         }
 
-        public static Vector3[] ToVector3(this Vector2[] aPointsArray, PlaneAxis aPlane = PlaneAxis.XY, float defaultZ = 0f)
+        public static Vector3[] ToVector3(this Vector2[] points, PlaneAxis planeAxis = PlaneAxis.XY, float defaultZ = 0f)
         {
-            Vector3[] results = new Vector3[aPointsArray.Length];
-            aPointsArray.ToVector3(ref results, aPlane, defaultZ);
+            Vector3[] results = new Vector3[points.Length];
+            points.ToVector3(ref results, planeAxis, defaultZ);
             return results;
         }
 
-        public static void ToVector3(this Vector2[] aPointsArray, ref Vector3[] outVecs, PlaneAxis aPlane = PlaneAxis.XY, float defaultZ = 0f)
+        public static void ToVector3(this Vector2[] points, ref Vector3[] outVecs, PlaneAxis planeAxis = PlaneAxis.XY, float defaultZ = 0f)
         {
-            for(int i=0; i<aPointsArray.Length; i++)
+            for (int i = 0; i < points.Length; i++)
             {
-                Vector3Ext.FromVector2(ref outVecs[i], ref aPointsArray[i], aPlane, defaultZ);
+                Vector3Ext.FromVector2(ref outVecs[i], ref points[i], planeAxis, defaultZ);
             }
         }
-    
-        public static Vector2Int ToInt(this Vector2 aVector2)
+
+        public static Vector2Int ToInt(this Vector2 v2)
         {
-            return new Vector2Int((int)aVector2.x, (int)aVector2.y);
+            return new Vector2Int((int)v2.x, (int)v2.y);
         }
 
-        public static Vector2 ToFloat(this Vector2Int aVector2)
+        public static Vector2 ToFloat(this Vector2Int v2)
         {
-            return new Vector2(aVector2.x, aVector2.y);
+            return new Vector2(v2.x, v2.y);
         }
 
-        public static Vector2 ComputeCenter(this Vector2[] aPointsArray)
+        public static Vector2 ComputeCenter(this Vector2[] points)
         {
-            float invcount = 1.0f / (float)aPointsArray.Length;
+            float invcount = 1.0f / (float)points.Length;
             Vector2 accumed = Vector2.zero;
-            for (int i = 0; i < aPointsArray.Length; i++)
+            for (int i = 0; i < points.Length; i++)
             {
-                accumed += aPointsArray[i];
+                accumed += points[i];
             }
             return accumed * invcount;
         }
 
-        public static Vector2[] ToCenterOrigin(this Vector2[] aPointsArray)
+        public static Vector2[] ToCenterOrigin(this Vector2[] points)
         {
-            Vector2[] results = new Vector2[aPointsArray.Length];
-            Vector2 center = aPointsArray.ComputeCenter();
-            for (int i = 0; i < aPointsArray.Length; i++)
+            Vector2[] results = new Vector2[points.Length];
+            Vector2 center = points.ComputeCenter();
+            for (int i = 0; i < points.Length; i++)
             {
-                results[i] = aPointsArray[i] - center;
+                results[i] = points[i] - center;
             }
             return results;
         }
 
-        public static Vector2[] ToBottomLeftOrigin(this Vector2[] aPointsArray)
+        public static Vector2[] ToBottomLeftOrigin(this Vector2[] points)
         {
-            Vector2[] results = new Vector2[aPointsArray.Length];
+            Vector2[] results = new Vector2[points.Length];
             Rect bounds = new Rect();
-            RectExt.EncapsulatePoints(ref bounds, ref aPointsArray);
+            RectExt.EncapsulatePoints(ref bounds, ref points);
             Vector2 offset = new Vector2(-bounds.xMin, -bounds.yMin);
 
-            for (int i = 0; i < aPointsArray.Length; i++)
+            for (int i = 0; i < points.Length; i++)
             {
-                results[i] = aPointsArray[i] + offset;
+                results[i] = points[i] + offset;
             }
             return results;
         }
 
-        public static Vector2[] ToRotated(this Vector2[] aPointsArray, float aRotationDegrees)
+        public static Vector2[] ToRotated(this Vector2[] points, float degrees)
         {
-            Quaternion quaternion = Quaternion.AngleAxis(aRotationDegrees, Vector3.forward);
-            Vector2[] rotatedPoints = new Vector2[aPointsArray.Length];
-            for (int i = 0; i < aPointsArray.Length; i++)
+            Quaternion quaternion = Quaternion.AngleAxis(degrees, Vector3.forward);
+            Vector2[] rotatedPoints = new Vector2[points.Length];
+            for (int i = 0; i < points.Length; i++)
             {
-                rotatedPoints[i] = quaternion * aPointsArray[i];
+                rotatedPoints[i] = quaternion * points[i];
             }
             return rotatedPoints;
         }
 
-        public static void Rotate(this Vector2[] aPointsArray, float aRotationDegrees)
+        public static void Rotate(this Vector2[] points, float degrees)
         {
-            Quaternion quaternion = Quaternion.AngleAxis(aRotationDegrees, Vector3.forward);
-            for (int i = 0; i < aPointsArray.Length; i++)
+            Quaternion quaternion = Quaternion.AngleAxis(degrees, Vector3.forward);
+            for (int i = 0; i < points.Length; i++)
             {
-                aPointsArray[i] = quaternion * aPointsArray[i];
+                points[i] = quaternion * points[i];
             }
         }
 
-        public static void RotateAround(this Vector2[] aPointsArray, float aRotationDegrees, Vector2 anOrigin)
+        public static void RotateAround(this Vector2[] points, float degrees, Vector2 anOrigin)
         {
-            Quaternion quaternion = Quaternion.AngleAxis(aRotationDegrees, Vector3.forward);
+            Quaternion quaternion = Quaternion.AngleAxis(degrees, Vector3.forward);
             Vector2 delta = Vector2.zero;
 
-            for (int i = 0; i < aPointsArray.Length; i++)
+            for (int i = 0; i < points.Length; i++)
             {
-                delta.x = aPointsArray[i].x - anOrigin.x;
-                delta.y = aPointsArray[i].y - anOrigin.y;
+                delta.x = points[i].x - anOrigin.x;
+                delta.y = points[i].y - anOrigin.y;
                 delta = quaternion * delta;
-                aPointsArray[i].x = anOrigin.x + delta.x;
-                aPointsArray[i].y = anOrigin.y + delta.y;
+                points[i].x = anOrigin.x + delta.x;
+                points[i].y = anOrigin.y + delta.y;
             }
         }
 
-        public static void Offset(this Vector2[] aPointsArray, Vector2 anOffset)
+        public static void Offset(this Vector2[] points, Vector2 offset)
         {
-            for (int i = 0; i < aPointsArray.Length; i++)
+            for (int i = 0; i < points.Length; i++)
             {
-                aPointsArray[i] = aPointsArray[i] + anOffset;
+                points[i] = points[i] + offset;
             }
         }
 
@@ -185,32 +205,33 @@ namespace Hbx.Ext
         {
             Vector2 from = pos2 - pos1;
             Vector2 to = new Vector2(1, 0);
-     
-            float result = Vector2.Angle( from, to );
-            Vector3 cross = Vector3.Cross( from, to );
-     
-            if (cross.z > 0) {
+
+            float result = Vector2.Angle(from, to);
+            Vector3 cross = Vector3.Cross(from, to);
+
+            if (cross.z > 0)
+            {
                 result = 360f - result;
             }
-     
+
             return result;
         }
 
-        public static int[] GetColinearIndicies(ref Vector2[] aPointsArray)
+        public static int[] GetColinearIndicies(ref Vector2[] points)
         {
             List<int> results = new List<int>();
-            if(aPointsArray.Length < 3) return results.ToArray();
+            if (points.Length < 3) return results.ToArray();
 
-            temp = (aPointsArray[1] - aPointsArray[0]);
+            temp = (points[1] - points[0]);
             Vector2 current = Vector2.zero;
 
-            for(int i=1; i<aPointsArray.Length-1; i++)
+            for (int i = 1; i < points.Length - 1; i++)
             {
-                current.x = aPointsArray[i+1].x - aPointsArray[i].x;
-                current.y = aPointsArray[i+1].y - aPointsArray[i].y;
+                current.x = points[i + 1].x - points[i].x;
+                current.y = points[i + 1].y - points[i].y;
 
                 float dot = Vector2.Dot(current, temp);
-                if(dot == 1.0f) results.Add(i);
+                if (dot == 1.0f) results.Add(i);
 
                 temp.Set(current.x, current.y);
             }
@@ -222,36 +243,47 @@ namespace Hbx.Ext
             Vector2 a = p2 - p1;
             Vector2 b = p3 - p4;
             Vector2 c = p1 - p3;
-           
-            float alphaNumerator = b.y*c.x - b.x*c.y;
-            float alphaDenominator = a.y*b.x - a.x*b.y;
-            float betaNumerator  = a.x*c.y - a.y*c.x;
-            float betaDenominator  = a.y*b.x - a.x*b.y;
-           
+
+            float alphaNumerator = b.y * c.x - b.x * c.y;
+            float alphaDenominator = a.y * b.x - a.x * b.y;
+            float betaNumerator = a.x * c.y - a.y * c.x;
+            float betaDenominator = a.y * b.x - a.x * b.y;
+
             bool doIntersect = true;
-           
-            if (alphaDenominator == 0 || betaDenominator == 0) {
+
+            if (alphaDenominator == 0 || betaDenominator == 0)
+            {
                 doIntersect = false;
-            } else {
-               
-                if (alphaDenominator > 0) {
-                    if (alphaNumerator < 0 || alphaNumerator > alphaDenominator) {
+            }
+            else
+            {
+
+                if (alphaDenominator > 0)
+                {
+                    if (alphaNumerator < 0 || alphaNumerator > alphaDenominator)
+                    {
                         doIntersect = false;
-                       
+
                     }
-                } else if (alphaNumerator > 0 || alphaNumerator < alphaDenominator) {
+                }
+                else if (alphaNumerator > 0 || alphaNumerator < alphaDenominator)
+                {
                     doIntersect = false;
                 }
-               
-                if (doIntersect && betaDenominator > 0) {
-                    if (betaNumerator < 0 || betaNumerator > betaDenominator) {
+
+                if (doIntersect && betaDenominator > 0)
+                {
+                    if (betaNumerator < 0 || betaNumerator > betaDenominator)
+                    {
                         doIntersect = false;
                     }
-                } else if (betaNumerator > 0 || betaNumerator < betaDenominator) {
+                }
+                else if (betaNumerator > 0 || betaNumerator < betaDenominator)
+                {
                     doIntersect = false;
                 }
             }
-         
+
             return doIntersect;
         }
 
@@ -262,77 +294,95 @@ namespace Hbx.Ext
 
         public static bool SegmentSegmentIntersection(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4, ref Vector2 intersection)
         {
-         
-            float Ax,Bx,Cx,Ay,By,Cy,d,e,f,num/*,offset*/;
-            float x1lo,x1hi,y1lo,y1hi;
-         
-            Ax = p2.x-p1.x;
-            Bx = p3.x-p4.x;
-         
+
+            float Ax, Bx, Cx, Ay, By, Cy, d, e, f, num/*,offset*/;
+            float x1lo, x1hi, y1lo, y1hi;
+
+            Ax = p2.x - p1.x;
+            Bx = p3.x - p4.x;
+
             // X bound box test/
-            if(Ax<0) {
-                x1lo=p2.x; x1hi=p1.x;
-            } else {
-                x1hi=p2.x; x1lo=p1.x;
+            if (Ax < 0)
+            {
+                x1lo = p2.x; x1hi = p1.x;
+            }
+            else
+            {
+                x1hi = p2.x; x1lo = p1.x;
             }
 
-            if(Bx>0) {
-                if(x1hi < p4.x || p3.x < x1lo) return false;
-            } else {
-                if(x1hi < p3.x || p4.x < x1lo) return false;
+            if (Bx > 0)
+            {
+                if (x1hi < p4.x || p3.x < x1lo) return false;
+            }
+            else
+            {
+                if (x1hi < p3.x || p4.x < x1lo) return false;
             }
 
-            Ay = p2.y-p1.y;         
-            By = p3.y-p4.y;
+            Ay = p2.y - p1.y;
+            By = p3.y - p4.y;
 
             // Y bound box test//         
-            if(Ay<0) {
-                y1lo=p2.y; y1hi=p1.y;
-            } else {
-                y1hi=p2.y; y1lo=p1.y;
+            if (Ay < 0)
+            {
+                y1lo = p2.y; y1hi = p1.y;
+            }
+            else
+            {
+                y1hi = p2.y; y1lo = p1.y;
             }
 
-            if(By>0) {         
-                if(y1hi < p4.y || p3.y < y1lo) return false;
-            } else {
-                if(y1hi < p3.y || p4.y < y1lo) return false;
+            if (By > 0)
+            {
+                if (y1hi < p4.y || p3.y < y1lo) return false;
+            }
+            else
+            {
+                if (y1hi < p3.y || p4.y < y1lo) return false;
             }
 
-            Cx = p1.x-p3.x;         
-            Cy = p1.y-p3.y;
-            d = By*Cx - Bx*Cy;  // alpha numerator//
-            f = Ay*Bx - Ax*By;  // both denominator//
-         
+            Cx = p1.x - p3.x;
+            Cy = p1.y - p3.y;
+            d = By * Cx - Bx * Cy;  // alpha numerator//
+            f = Ay * Bx - Ax * By;  // both denominator//
+
             // alpha tests//
-            if(f>0) {
-                if(d<0 || d>f) return false;
-            } else {
-                if(d>0 || d<f) return false;
+            if (f > 0)
+            {
+                if (d < 0 || d > f) return false;
+            }
+            else
+            {
+                if (d > 0 || d < f) return false;
             }
 
-            e = Ax*Cy - Ay*Cx;  // beta numerator//           
-         
+            e = Ax * Cy - Ay * Cx;  // beta numerator//           
+
             // beta tests //
-            if(f>0) {                          
-              if(e<0 || e>f) return false;
-            } else {
-              if(e>0 || e<f) return false;
-             }
+            if (f > 0)
+            {
+                if (e < 0 || e > f) return false;
+            }
+            else
+            {
+                if (e > 0 || e < f) return false;
+            }
 
             // check if they are parallel         
-            if(f==0) return false;
+            if (f == 0) return false;
             // compute intersection coordinates //
-            num = d*Ax; // numerator //
-        //    offset = same_sign(num,f) ? f*0.5f : -f*0.5f;   // round direction //
-        //    intersection.x = p1.x + (num+offset) / f;
-              intersection.x = p1.x + num / f;
-            num = d*Ay;
+            num = d * Ax; // numerator //
+                          //    offset = same_sign(num,f) ? f*0.5f : -f*0.5f;   // round direction //
+                          //    intersection.x = p1.x + (num+offset) / f;
+            intersection.x = p1.x + num / f;
+            num = d * Ay;
 
-        //    offset = same_sign(num,f) ? f*0.5f : -f*0.5f;         
-        //    intersection.y = p1.y + (num+offset) / f;
+            //    offset = same_sign(num,f) ? f*0.5f : -f*0.5f;         
+            //    intersection.y = p1.y + (num+offset) / f;
             intersection.y = p1.y + num / f;
 
-            return true;         
+            return true;
         }
 
         public static bool LineLineIntersection(Vector2 alinePoint1, Vector2 alineVec1, Vector2 alinePoint2, Vector2 alineVec2, out Vector2 intersection)
@@ -345,11 +395,11 @@ namespace Hbx.Ext
             Vector3 lineVec3 = linePoint2 - linePoint1;
             Vector3 crossVec1and2 = Vector3.Cross(lineVec1, lineVec2);
             Vector3 crossVec3and2 = Vector3.Cross(lineVec3, lineVec2);
-     
+
             float planarFactor = Vector3.Dot(lineVec3, crossVec1and2);
-     
+
             //is coplanar, and not parrallel
-            if(Mathf.Abs(planarFactor) < 0.0001f && crossVec1and2.sqrMagnitude > 0.0001f)
+            if (Mathf.Abs(planarFactor) < 0.0001f && crossVec1and2.sqrMagnitude > 0.0001f)
             {
                 float s = Vector3.Dot(crossVec3and2, crossVec1and2) / crossVec1and2.sqrMagnitude;
                 intersection = (linePoint1 + (lineVec1 * s)).ToVector2(PlaneAxis.XY);
@@ -384,7 +434,7 @@ namespace Hbx.Ext
             float d = Vector2.Dot(v, lineDir);
             return linePnt + lineDir * d;
         }
- 
+
     }
 
 
@@ -397,162 +447,162 @@ namespace Hbx.Ext
         public static Vector3 temp = Vector3.zero;
 
 
-        public static void FromVector2(this Vector3 aVector3, ref Vector2 aVector2, PlaneAxis aPlane = PlaneAxis.XY, float defaultZ = 0f)
+        public static void FromVector2(this Vector3 v3, ref Vector2 v2, PlaneAxis planeAxis = PlaneAxis.XY, float defaultZ = 0f)
         {
-            switch(aPlane)
+            switch (planeAxis)
             {
                 case PlaneAxis.XY:
-                {
-                    aVector3.x = aVector2.x; aVector3.y = aVector2.y; aVector3.z = defaultZ;
-                    break;
-                }
+                    {
+                        v3.x = v2.x; v3.y = v2.y; v3.z = defaultZ;
+                        break;
+                    }
                 case PlaneAxis.XZ:
-                {
-                    aVector3.x = aVector2.x; aVector3.z = aVector2.y; aVector3.y = defaultZ;
-                    break;
-                }
+                    {
+                        v3.x = v2.x; v3.z = v2.y; v3.y = defaultZ;
+                        break;
+                    }
                 case PlaneAxis.ZY:
-                {
-                    aVector3.z = aVector2.x; aVector3.y = aVector2.y; aVector3.x = defaultZ;
-                    break;
-                }
+                    {
+                        v3.z = v2.x; v3.y = v2.y; v3.x = defaultZ;
+                        break;
+                    }
                 default: break;
             }
         }
 
         // todo, can above just call this, we need this one to call on elements in ref arrays
-        public static void FromVector2(ref Vector3 aVector3, ref Vector2 aVector2, PlaneAxis aPlane = PlaneAxis.XY, float defaultZ = 0f)
+        public static void FromVector2(ref Vector3 v3, ref Vector2 v2, PlaneAxis planeAxis = PlaneAxis.XY, float defaultZ = 0f)
         {
-            switch(aPlane)
+            switch (planeAxis)
             {
                 case PlaneAxis.XY:
-                {
-                    aVector3.x = aVector2.x; aVector3.y = aVector2.y; aVector3.z = defaultZ;
-                    break;
-                }
+                    {
+                        v3.x = v2.x; v3.y = v2.y; v3.z = defaultZ;
+                        break;
+                    }
                 case PlaneAxis.XZ:
-                {
-                    aVector3.x = aVector2.x; aVector3.z = aVector2.y; aVector3.y = defaultZ;
-                    break;
-                }
+                    {
+                        v3.x = v2.x; v3.z = v2.y; v3.y = defaultZ;
+                        break;
+                    }
                 case PlaneAxis.ZY:
-                {
-                    aVector3.z = aVector2.x; aVector3.y = aVector2.y; aVector3.x = defaultZ;
-                    break;
-                }
+                    {
+                        v3.z = v2.x; v3.y = v2.y; v3.x = defaultZ;
+                        break;
+                    }
                 default: break;
             }
         }
 
-        public static Vector2 ToVector2(this Vector3 aVector3, PlaneAxis aPlane = PlaneAxis.XY)
+        public static Vector2 ToVector2(this Vector3 v3, PlaneAxis planeAxis = PlaneAxis.XY)
         {
-            aVector3.ToVector2(ref Vector2Ext.temp, aPlane);
+            v3.ToVector2(ref Vector2Ext.temp, planeAxis);
             return Vector2Ext.temp;
         }
 
-        public static void ToVector2(this Vector3 aVector3, ref Vector2 aVector2, PlaneAxis aPlane = PlaneAxis.XY)
+        public static void ToVector2(this Vector3 v3, ref Vector2 v2, PlaneAxis planeAxis = PlaneAxis.XY)
         {
-            Vector2Ext.FromVector3(ref aVector2, ref aVector3, aPlane);
+            Vector2Ext.FromVector3(ref v2, ref v3, planeAxis);
         }
 
-        public static Vector2[] ToVector2(this Vector3[] aPointsArray, PlaneAxis aPlane = PlaneAxis.XY)
+        public static Vector2[] ToVector2(this Vector3[] points, PlaneAxis planeAxis = PlaneAxis.XY)
         {
-            Vector2[] results = new Vector2[aPointsArray.Length];
-            aPointsArray.ToVector2(ref results, aPlane);
+            Vector2[] results = new Vector2[points.Length];
+            points.ToVector2(ref results, planeAxis);
             return results;
         }
 
-        public static void ToVector2(this Vector3[] aPointsArray, ref Vector2[] outVecs, PlaneAxis aPlane = PlaneAxis.XY)
+        public static void ToVector2(this Vector3[] points, ref Vector2[] outVecs, PlaneAxis planeAxis = PlaneAxis.XY)
         {
-            for(int i=0; i<aPointsArray.Length; i++)
+            for (int i = 0; i < points.Length; i++)
             {
-                Vector2Ext.FromVector3(ref outVecs[i], ref aPointsArray[i], aPlane);
+                Vector2Ext.FromVector3(ref outVecs[i], ref points[i], planeAxis);
             }
         }
 
-        public static Vector3 ComputeRangerCenter(this Vector3[] aVec3Array, int aStart, int aCount)
+        public static Vector3 ComputeRangerCenter(this Vector3[] points, int aStart, int aCount)
         {
             Vector3 center = new Vector3();
-            for(int i=aStart; i<aStart+aCount; i++)
-                center += aVec3Array[i];
-            center *= 1.0f/(aVec3Array.Length-aStart);
+            for (int i = aStart; i < aStart + aCount; i++)
+                center += points[i];
+            center *= 1.0f / (points.Length - aStart);
             return center;
         }
 
-        public static Vector3 ComputeCenter(this Vector3[] aPointsArray)
+        public static Vector3 ComputeCenter(this Vector3[] points)
         {
-            float invcount = 1.0f / (float)aPointsArray.Length;
+            float invcount = 1.0f / (float)points.Length;
             Vector3 accumed = Vector3.zero;
-            for (int i = 0; i < aPointsArray.Length; i++)
+            for (int i = 0; i < points.Length; i++)
             {
-                accumed += aPointsArray[i];
+                accumed += points[i];
             }
             return accumed * invcount;
         }
 
-        public static Vector3[] ToCenterOrigin(this Vector3[] aPointsArray)
+        public static Vector3[] ToCenterOrigin(this Vector3[] points)
         {
-            Vector3[] results = new Vector3[aPointsArray.Length];
-            Vector3 center = aPointsArray.ComputeCenter();
-            for (int i = 0; i < aPointsArray.Length; i++)
+            Vector3[] results = new Vector3[points.Length];
+            Vector3 center = points.ComputeCenter();
+            for (int i = 0; i < points.Length; i++)
             {
-                results[i] = aPointsArray[i] - center;
+                results[i] = points[i] - center;
             }
             return results;
         }
 
-        public static Vector3[] ToRotated(this Vector3[] aPointsArray, float aRotationDegrees, PlaneAxis aPlane = PlaneAxis.XY)
+        public static Vector3[] ToRotated(this Vector3[] points, float degrees, PlaneAxis planeAxis = PlaneAxis.XY)
         {
-            return aPointsArray.ToRotated(aRotationDegrees, Axis.NormalForPlaneAxis(aPlane));
+            return points.ToRotated(degrees, Axis.NormalForPlaneAxis(planeAxis));
         }
 
-        public static Vector3[] ToRotated(this Vector3[] aPointsArray, float aRotationDegrees, Vector3 anAxis)
+        public static Vector3[] ToRotated(this Vector3[] points, float degrees, Vector3 anAxis)
         {
-            Quaternion quaternion = Quaternion.AngleAxis(aRotationDegrees, anAxis);
-            Vector3[] rotatedPoints = new Vector3[aPointsArray.Length];
-            for (int i = 0; i < aPointsArray.Length; i++)
+            Quaternion quaternion = Quaternion.AngleAxis(degrees, anAxis);
+            Vector3[] rotatedPoints = new Vector3[points.Length];
+            for (int i = 0; i < points.Length; i++)
             {
-                rotatedPoints[i] = quaternion * aPointsArray[i];
+                rotatedPoints[i] = quaternion * points[i];
             }
             return rotatedPoints;
         }
 
-        public static void Rotate(this Vector3[] aPointsArray, float aRotationDegrees, PlaneAxis aPlane = PlaneAxis.XY)
+        public static void Rotate(this Vector3[] points, float degrees, PlaneAxis planeAxis = PlaneAxis.XY)
         {
-            aPointsArray.Rotate(aRotationDegrees, Axis.NormalForPlaneAxis(aPlane));
+            points.Rotate(degrees, Axis.NormalForPlaneAxis(planeAxis));
         }
 
-        public static void Rotate(this Vector3[] aPointsArray, float aRotationDegrees, Vector3 anAxis)
+        public static void Rotate(this Vector3[] points, float degrees, Vector3 anAxis)
         {
-            Quaternion quaternion = Quaternion.AngleAxis(aRotationDegrees, anAxis);
-            for (int i = 0; i < aPointsArray.Length; i++)
+            Quaternion quaternion = Quaternion.AngleAxis(degrees, anAxis);
+            for (int i = 0; i < points.Length; i++)
             {
-                aPointsArray[i] = quaternion * aPointsArray[i];
+                points[i] = quaternion * points[i];
             }
         }
 
         public static void WorldToScreenSpace(ref Vector3[] refCorners, Camera aCamera, int aStart, int aCount)
         {
-            for(int i=aStart; i<aStart+aCount; i++)
+            for (int i = aStart; i < aStart + aCount; i++)
                 refCorners[i] = aCamera.WorldToScreenPoint(refCorners[i]);
         }
-            
+
         public static void WorldToScreenSpace(ref Vector3[] refCorners, Vector3[] worldCorners, Camera aCamera, int aStart, int aCount)
         {
-            for(int i=aStart; i<aStart+aCount; i++)
-                refCorners[i] = aCamera.WorldToScreenPoint(worldCorners[i-aStart]);
+            for (int i = aStart; i < aStart + aCount; i++)
+                refCorners[i] = aCamera.WorldToScreenPoint(worldCorners[i - aStart]);
         }
-            
-       public static void ScreenToWorldSpace(ref Vector3[] refCorners, Camera aCamera, int aStart, int aCount)
+
+        public static void ScreenToWorldSpace(ref Vector3[] refCorners, Camera aCamera, int aStart, int aCount)
         {
-            for(int i=aStart; i<aStart+aCount; i++)
+            for (int i = aStart; i < aStart + aCount; i++)
                 refCorners[i] = aCamera.ScreenToWorldPoint(refCorners[i]);
         }
-            
+
         public static void ScreenToWorldSpace(ref Vector3[] refCorners, Vector3[] screenCorners, Camera aCamera, int aStart, int aCount)
         {
-            for(int i=aStart; i<aStart+aCount; i++)
-                refCorners[i] = aCamera.ScreenToWorldPoint(screenCorners[i-aStart]);
+            for (int i = aStart; i < aStart + aCount; i++)
+                refCorners[i] = aCamera.ScreenToWorldPoint(screenCorners[i - aStart]);
         }
 
         public static Vector3 ClosestPointOnSegment(Vector3 p1, Vector3 p2, Vector3 point)
@@ -563,4 +613,4 @@ namespace Hbx.Ext
         }
     }
 
-} // end Hbx Ext namespace
+}
