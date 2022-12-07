@@ -147,10 +147,10 @@ public class LoadUnitTests
     }
 
     [Test]
-    public async Task CanReadHttpPvrTexture2D()
+    public async Task CanReadHttpDDSTexture2D()
     {
         // arrange
-        string url = UnitTestData.HbxTinyPvrPathUrl;
+        string url = UnitTestData.HbxTinyDdsPathUrl;
 
         // act
         ILoaderResult<Texture2D> texresult = await Load.Get.ReadAsync<Texture2D>(url, null);
